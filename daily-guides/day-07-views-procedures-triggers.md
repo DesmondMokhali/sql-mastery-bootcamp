@@ -1,6 +1,6 @@
 # 📦 Day 7: Views, Procedures & Triggers
 **Wednesday, 11 March 2026**  
-**Video: [15:35:02–18:23:42](https://www.youtube.com/watch?v=SSKVgrwhzus)**
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 
@@ -580,7 +580,7 @@ EXECUTE FUNCTION audit_trip_insert_async();
 - [ ] Know when to use temp table vs view
 - [ ] Attempted Lab 1–5 without solutions
 - [ ] Can explain trigger overhead in own words
-- [ ] Watched video segment [15:35:02–18:23:42](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

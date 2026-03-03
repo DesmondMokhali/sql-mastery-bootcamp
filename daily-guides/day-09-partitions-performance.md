@@ -1,6 +1,6 @@
 # ⚡ Day 9: Partitioning & Performance at Scale
 **Friday, 13 March 2026**  
-**Video: [21:11:03–22:24:25](https://www.youtube.com/watch?v=SSKVgrwhzus)**
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 
@@ -567,7 +567,7 @@ GROUP BY d.id, d.name;
 - [ ] Attempted Lab 1–5 without solutions
 - [ ] Understand billion-row scale challenges
 - [ ] Can diagnose "works at 1M rows, fails at 100M" scenario
-- [ ] Watched video segment [21:11:03–22:24:25](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

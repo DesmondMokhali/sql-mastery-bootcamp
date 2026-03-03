@@ -1,5 +1,5 @@
 # ⚙️ Day 4: Functions, NULL & CASE — Transforming Data Safely
-**Date:** Friday, 6 March 2026 | **Video:** 04:02:09 – 08:43:36 | [![YouTube](https://img.shields.io/badge/YouTube-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

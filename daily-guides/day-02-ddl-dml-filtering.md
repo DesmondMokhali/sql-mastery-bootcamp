@@ -1,5 +1,5 @@
 # 🏗️ Day 2: DDL, DML & Filtering — Building and Modifying Data
-**Date:** Wednesday, 4 March 2026 | **Video:** 01:32:31 – 02:47:57 | [![YouTube](https://img.shields.io/badge/YouTube-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

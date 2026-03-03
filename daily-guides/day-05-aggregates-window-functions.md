@@ -1,5 +1,5 @@
 # 📊 Day 5: Aggregates & Window Functions — Advanced Data Analysis
-**Date:** Monday, 9 March 2026 | **Video:** 08:43:36 – 11:56:05 | [![YouTube](https://img.shields.io/badge/YouTube-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

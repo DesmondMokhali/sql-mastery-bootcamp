@@ -1,5 +1,5 @@
 # 🔗 Day 3: Joins — Combining Data from Multiple Tables
-**Date:** Thursday, 5 March 2026 | **Video:** 02:47:57 – 04:02:09 | [![YouTube](https://img.shields.io/badge/YouTube-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

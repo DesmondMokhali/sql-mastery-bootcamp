@@ -1,6 +1,6 @@
 # 🚀 Day 8: Indexes & Execution Plans
 **Thursday, 12 March 2026**  
-**Video: [18:23:42–21:11:03](https://www.youtube.com/watch?v=SSKVgrwhzus)**
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 
@@ -499,7 +499,7 @@ LEFT JOIN reviews r ON rt.id = r.trip_id;
 - [ ] Understand cost-based optimizer (seq_page_cost, random_page_cost)
 - [ ] Can diagnose estimated rows ≠ actual rows
 - [ ] Attempted Lab 1–5 without solutions
-- [ ] Watched video segment [18:23:42–21:11:03](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

@@ -1,6 +1,6 @@
 # 🔄 Day 6: Subqueries, CTEs & Optimization
 **Tuesday, 10 March 2026**  
-**Video: [12:40:34–15:35:02](https://www.youtube.com/watch?v=SSKVgrwhzus)**
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 
@@ -474,7 +474,7 @@ GROUP BY d.id, d.name;
 - [ ] Attempted Lab 1–5 without looking at solutions
 - [ ] Explained to someone: "Why CTE might be slower"
 - [ ] Read EXPLAIN output for CTE query
-- [ ] Watched video segment [12:40:34–15:35:02](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

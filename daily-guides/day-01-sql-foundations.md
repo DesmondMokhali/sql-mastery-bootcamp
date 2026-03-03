@@ -1,5 +1,5 @@
 # 📚 Day 1: SQL Foundations — Building the Mental Model
-**Date:** Tuesday, 3 March 2026 | **Video:** 00:00 – 01:32:31 | [![YouTube](https://img.shields.io/badge/YouTube-Watch-red?logo=youtube)](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

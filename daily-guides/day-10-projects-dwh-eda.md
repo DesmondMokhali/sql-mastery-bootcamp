@@ -1,6 +1,6 @@
 # 🏆 Day 10: Data Warehouse & Final Projects
 **Friday, 13 March 2026 (Extension)**  
-**Video: [23:21:04–29:47:24](https://www.youtube.com/watch?v=SSKVgrwhzus)**
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 
@@ -636,7 +636,7 @@ DELETE FROM dashboard_cache WHERE table_name = 'gold_fact_trips';
 - [ ] Understand billion-row design considerations
 - [ ] Can diagnose real ETL failures (memory, timing)
 - [ ] Know incremental load patterns
-- [ ] Watched video segment [23:21:04–29:47:24](https://www.youtube.com/watch?v=SSKVgrwhzus)
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
 
 ---
 

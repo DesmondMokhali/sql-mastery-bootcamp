@@ -176,11 +176,20 @@ This transforms a solo bootcamp into a guided learning experience. The AI knows 
 
 ---
 
-## 🎬 Video Resource
+## 🎬 Video Resource & Credits
 
-Full video course (30 hours): https://www.youtube.com/watch?v=SSKVgrwhzus
+This bootcamp is structured around an outstanding free video course. **Full credit and massive thanks to the original creator:**
 
-Each day guide includes exact timestamps where the video covers that day's topic. Watch the video, follow the guide, then practice.
+| | |
+|---|---|
+| **Video Title** | SQL Full Course for Beginners (30 Hours) – From Zero to Hero |
+| **Creator** | [Data with Baraa](https://www.youtube.com/@DataWithBaraa) |
+| **Watch Free** | [youtube.com/watch?v=SSKVgrwhzus](https://www.youtube.com/watch?v=SSKVgrwhzus) |
+| **Duration** | ~30 Hours |
+
+> ⚠️ **Important:** This bootcamp is a **study framework** built on top of Baraa's video. All video content, explanations, and teaching belong to **Data with Baraa**. This repo adds structure, lab exercises, study tools, and AI mentor prompts to enhance your learning experience. Please watch, like, and subscribe to support the original creator!
+
+Each daily guide includes exact timestamps so you know exactly where to start and stop in the video each day.
 
 ---
 
