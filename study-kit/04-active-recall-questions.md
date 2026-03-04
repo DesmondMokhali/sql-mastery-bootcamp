@@ -19,7 +19,7 @@
 
 ---
 
-## 🎯 Conceptual Questions (Days 1–3)
+## 🎯 Conceptual Questions (Days 1-3)
 
 ### Q1: Explain the difference between WHERE and HAVING
 
@@ -67,7 +67,7 @@
 
 ---
 
-## 🎯 Window Function Questions (Days 4–5)
+## 🎯 Window Function Questions (Days 4-5)
 
 ### Q11: What does `ROW_NUMBER() OVER (PARTITION BY driver_id ORDER BY fare DESC)` do?
 
@@ -87,7 +87,7 @@
 
 ### Q14: What does `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` mean?
 
-> **Answer:** Creates a running total frame: from first row to current row. Example: cumulative sum of fares: row 1 = sum of row 1, row 2 = sum of rows 1–2, row 3 = sum of rows 1–3. (Default for SUM, AVG if you use ORDER BY).
+> **Answer:** Creates a running total frame: from first row to current row. Example: cumulative sum of fares: row 1 = sum of row 1, row 2 = sum of rows 1-2, row 3 = sum of rows 1-3. (Default for SUM, AVG if you use ORDER BY).
 
 ### Q15: How do you get "top 3 trips per driver" using window functions?
 
@@ -135,7 +135,7 @@
 
 ### Q20: What's a recursive CTE? Give one-word use case.
 
-> **Answer:** Self-referencing CTE. Use case: **Hierarchies** (org charts, file systems) or **sequences** (generate numbers 1–100). Example: Walk a tree structure.
+> **Answer:** Self-referencing CTE. Use case: **Hierarchies** (org charts, file systems) or **sequences** (generate numbers 1-100). Example: Walk a tree structure.
 
 ---
 
@@ -183,7 +183,7 @@
 
 ### Q30: Can you have too many indexes?
 
-> **Answer:** Yes. Each index slows INSERT/UPDATE/DELETE (extra work to maintain). Trade-off: faster SELECTs, slower writes. Rule of thumb: 3–5 indexes per table max. Index on heavily updated columns is usually bad.
+> **Answer:** Yes. Each index slows INSERT/UPDATE/DELETE (extra work to maintain). Trade-off: faster SELECTs, slower writes. Rule of thumb: 3-5 indexes per table max. Index on heavily updated columns is usually bad.
 
 ---
 
@@ -284,7 +284,7 @@
 > Returns rows in first query but NOT in second (difference)
 
 ### Q53: Max columns in single index?
-> PostgreSQL: 32. Most use 3–5 (diminishing returns).
+> PostgreSQL: 32. Most use 3-5 (diminishing returns).
 
 ### Q54: How do you drop an index without downtime?
 > `DROP INDEX CONCURRENTLY idx_name` (PostgreSQL syntax)
@@ -359,16 +359,16 @@ Track your active recall progress:
 
 | Category | Questions | Correct | Score |
 |----------|-----------|---------|-------|
-| Conceptual (1–5) | 5 | | |
-| JOIN (6–10) | 5 | | |
-| Window (11–15) | 5 | | |
-| CTE (16–20) | 5 | | |
-| Views/Procs (21–25) | 5 | | |
-| Indexes (26–30) | 5 | | |
-| Partitioning (31–35) | 5 | | |
-| Warehouse (36–40) | 5 | | |
-| Rapid-Fire (41–60) | 20 | | |
-| Explain-Like-5 (61–70) | 10 | | |
+| Conceptual (1-5) | 5 | | |
+| JOIN (6-10) | 5 | | |
+| Window (11-15) | 5 | | |
+| CTE (16-20) | 5 | | |
+| Views/Procs (21-25) | 5 | | |
+| Indexes (26-30) | 5 | | |
+| Partitioning (31-35) | 5 | | |
+| Warehouse (36-40) | 5 | | |
+| Rapid-Fire (41-60) | 20 | | |
+| Explain-Like-5 (61-70) | 10 | | |
 | **TOTAL** | **70** | | |
 
 **Target:** 60+ correct (86%+) = ready for interviews

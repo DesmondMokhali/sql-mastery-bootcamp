@@ -40,19 +40,19 @@ This bootcamp is designed around **three core learning principles:**
 
 ### The Session Structure (8 hours / day)
 
-#### Morning Block (09:00–12:00) — Learn & Understand
+#### Morning Block (09:00-12:00) - Learn & Understand
 
-**09:00–09:45** Topic 1 Deep Dive
+**09:00-09:45** Topic 1 Deep Dive
 - Read the guide
 - Understand the *why*, not just the *how*
 - **Active recall check:** Close guide, explain to imaginary colleague
 
-**09:45–10:30** Topic 2 Deep Dive
+**09:45-10:30** Topic 2 Deep Dive
 - Repeat process
 
-**10:30–11:15** Topic 3 Deep Dive
+**10:30-11:15** Topic 3 Deep Dive
 
-**11:15–12:00** Synthesis
+**11:15-12:00** Synthesis
 - Connect all 3 topics
 - Real-world example from Uber schema
 - Ask: "When would I use this?"
@@ -61,25 +61,25 @@ This bootcamp is designed around **three core learning principles:**
 
 ---
 
-#### Midday Break (12:00–13:00)
+#### Midday Break (12:00-13:00)
 **Step away.** Lunch, walk, let brain consolidate. Don't study during lunch.
 
 ---
 
-#### Afternoon Block (13:00–15:15) — Practice & Master
+#### Afternoon Block (13:00-15:15) - Practice & Master
 
-**13:00–13:45** Deep Dive Section
+**13:00-13:45** Deep Dive Section
 - Study the ASCII diagrams
 - Understand execution trees, optimization barriers
 - **Why?** You'll see this in EXPLAIN output. Recognize patterns.
 
-**13:45–14:30** Lab Exercises 1–3
+**13:45-14:30** Lab Exercises 1-3
 - **DO NOT LOOK AT SOLUTIONS**
 - Spend 5 min per lab max
 - If stuck > 5 min, mark as "tricky" and move on
 - You'll come back to it
 
-**14:30–15:15** Lab Exercises 4–5 + Pressure Scenario
+**14:30-15:15** Lab Exercises 4-5 + Pressure Scenario
 - Lab 4 & 5 are harder
 - Pressure scenario: Real production bug, you debug it
 - This builds problem-solving muscle
@@ -88,17 +88,17 @@ This bootcamp is designed around **three core learning principles:**
 
 ---
 
-#### Evening Review (15:15–15:35) — Consolidate & Plan
+#### Evening Review (15:15-15:35) - Consolidate & Plan
 
-**15:15–15:25** Recap Checklist
+**15:15-15:25** Recap Checklist
 - Mark which items you can do confidently
 - Mark which items are shaky
 
-**15:25–15:35** Watch Video Segment
+**15:25-15:35** Watch Video Segment
 - Reinforce learning with different teaching style
 - Catch nuances you missed reading
 
-**15:35–16:00** Planning (optional)
+**15:35-16:00** Planning (optional)
 - Plan tomorrow's weak topics
 - Note gotchas in a personal notebook
 
@@ -197,7 +197,7 @@ This bootcamp is designed around **three core learning principles:**
 
 ```
 Update your mastery tracker:
-- Mark each topic 0–3
+- Mark each topic 0-3
 - Be honest (this is for you, not grades)
 - Identify 3 weak topics for next week
 ```
@@ -308,7 +308,7 @@ Day 8:  ████████░  80% confident
 Day 10: ██████████ 100% confident (in fundamentals)
 ```
 
-**Days 3–4 are hard.** This is normal. Push through.
+**Days 3-4 are hard.** This is normal. Push through.
 
 ---
 
@@ -388,13 +388,13 @@ Alternative: Explain to a friend (they don't need to understand)
 
 | Days | Focus | Skip |
 |------|-------|------|
-| 1–3 | SELECT, JOIN, GROUP BY (fundamentals) | None |
+| 1-3 | SELECT, JOIN, GROUP BY (fundamentals) | None |
 | 5 | Window functions (used everywhere) | Days 4 partially OK to skim |
 | 6 | CTEs (essential for real SQL) | None |
 | 8 | EXPLAIN ANALYZE (must understand optimization) | Detailed B-Tree theory OK to skip |
 | 10 | Star schema (data warehouse pattern) | Fact/dimension OK to understand shallowly |
 
-**Minimum viable bootcamp:** Days 1–3, 5, 6, 8, 10 = 6 days (fundamentals + real-world)
+**Minimum viable bootcamp:** Days 1-3, 5, 6, 8, 10 = 6 days (fundamentals + real-world)
 
 ---
 

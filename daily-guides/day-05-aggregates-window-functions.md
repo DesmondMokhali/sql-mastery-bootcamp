@@ -1,5 +1,5 @@
-# 📊 Day 5: Aggregates & Window Functions — Advanced Data Analysis
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+# 📊 Day 5: Aggregates & Window Functions - Advanced Data Analysis
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -18,21 +18,21 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| **09:00–10:30** | Core Theory + Structured Watching | 90 min | GROUP BY, aggregates, window functions |
-| **10:30–10:40** | Transition Buffer | 10 min | Rest & notes review |
-| **10:40–11:55** | Lab Engineering | 75 min | Progressive aggregate exercises |
-| **11:55–12:05** | Transition Buffer | 10 min | Hydrate & reset |
-| **12:05–12:35** | Recap Session | 30 min | Consolidate learning |
-| **12:35–12:45** | Transition Buffer | 10 min | Mental break |
-| **12:45–13:30** | Deep Dive / Engine Thinking | 45 min | Aggregation internals, memory usage |
-| **13:30–13:40** | Transition Buffer | 10 min | Prepare for assessment |
-| **13:40–14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
+| **09:00-10:30** | Core Theory + Structured Watching | 90 min | GROUP BY, aggregates, window functions |
+| **10:30-10:40** | Transition Buffer | 10 min | Rest & notes review |
+| **10:40-11:55** | Lab Engineering | 75 min | Progressive aggregate exercises |
+| **11:55-12:05** | Transition Buffer | 10 min | Hydrate & reset |
+| **12:05-12:35** | Recap Session | 30 min | Consolidate learning |
+| **12:35-12:45** | Transition Buffer | 10 min | Mental break |
+| **12:45-13:30** | Deep Dive / Engine Thinking | 45 min | Aggregation internals, memory usage |
+| **13:30-13:40** | Transition Buffer | 10 min | Prepare for assessment |
+| **13:40-14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
 
 ---
 
 ## 🎯 Core Focus Topics
 
-### 1. GROUP BY — Organizing Rows into Groups
+### 1. GROUP BY - Organizing Rows into Groups
 
 **GROUP BY** divides rows into groups and applies aggregate functions to each group:
 
@@ -86,7 +86,7 @@ GROUP BY city;
 
 ---
 
-### 2. HAVING — Filtering Groups (Not Rows)
+### 2. HAVING - Filtering Groups (Not Rows)
 
 **HAVING** filters *groups* after aggregation (while WHERE filters *rows* before aggregation):
 
@@ -128,7 +128,7 @@ HAVING AVG(rating) >= 4.5           -- Filter groups second
 
 ---
 
-### 3. PARTITION BY — Window Function Grouping
+### 3. PARTITION BY - Window Function Grouping
 
 **PARTITION BY** divides rows into windows (like GROUP BY) but keeps all rows (unlike GROUP BY which collapses groups):
 
@@ -159,7 +159,7 @@ FROM drivers;
 
 ---
 
-### 4. Ranking Functions — ROW_NUMBER, RANK, DENSE_RANK
+### 4. Ranking Functions - ROW_NUMBER, RANK, DENSE_RANK
 
 **Ranking functions** assign numeric ranks to rows within a partition:
 
@@ -208,7 +208,7 @@ SELECT * FROM ranked_drivers WHERE rank <= 3;
 
 ---
 
-### 5. Lead/Lag — Accessing Previous/Next Rows
+### 5. Lead/Lag - Accessing Previous/Next Rows
 
 **LEAD** and **LAG** access data from adjacent rows within a partition:
 
@@ -251,7 +251,7 @@ WHERE t1.status = 'completed';
 
 ---
 
-### 6. NTILE — Distributing Rows into Buckets
+### 6. NTILE - Distributing Rows into Buckets
 
 **NTILE(n)** divides rows into n equal buckets (quartiles, deciles, etc.):
 
@@ -304,7 +304,7 @@ SELECT * FROM quartiled WHERE city_quartile = 4;
 
 ## 🔧 Lab Engineering: Progressive SQL Exercises
 
-### Exercise 1: Easy — Basic GROUP BY with Aggregates
+### Exercise 1: Easy - Basic GROUP BY with Aggregates
 
 **Task:** Get trip statistics by city: count, average fare, min/max fare.
 
@@ -327,7 +327,7 @@ ORDER BY trip_count DESC;
 
 ---
 
-### Exercise 2: Medium — HAVING Filters and Multi-Column GROUP BY
+### Exercise 2: Medium - HAVING Filters and Multi-Column GROUP BY
 
 **Task:** Find driver-city pairs with 10+ trips and average fare > $30, ranked by completion rate.
 
@@ -352,7 +352,7 @@ ORDER BY completion_rate DESC, trip_count DESC;
 
 ---
 
-### Exercise 3: Hard — Window Functions with PARTITION BY and RANK
+### Exercise 3: Hard - Window Functions with PARTITION BY and RANK
 
 **Task:** Show each driver's trips with percentile rank within their city, and compare to city average.
 
@@ -388,11 +388,11 @@ ORDER BY city, name, trip_recency_rank
 LIMIT 50;
 ```
 
-**Learning:** Window functions keep all rows (unlike GROUP BY). PARTITION BY creates groups within windows. PERCENT_RANK ranks 0.0–1.0. Multiple window functions in one query combine analyses.
+**Learning:** Window functions keep all rows (unlike GROUP BY). PARTITION BY creates groups within windows. PERCENT_RANK ranks 0.0-1.0. Multiple window functions in one query combine analyses.
 
 ---
 
-### Exercise 4: Challenge — Lead/Lag for Temporal Analysis
+### Exercise 4: Challenge - Lead/Lag for Temporal Analysis
 
 **Task:** Analyze trip patterns: consecutive trips per driver, fare changes, and gaps between trips.
 
@@ -437,7 +437,7 @@ ORDER BY driver_id, trip_num;
 
 ---
 
-### Exercise 5: Stretch — Complex Window Frames and Running Aggregates
+### Exercise 5: Stretch - Complex Window Frames and Running Aggregates
 
 **Task:** Calculate 7-day rolling average fare per driver, rank drivers by volatility, show trend direction.
 

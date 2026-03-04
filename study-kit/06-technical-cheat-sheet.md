@@ -339,21 +339,21 @@ ORDER BY mean_exec_time DESC LIMIT 10;  -- Top slow queries
 
 | # | Optimization | Impact | Effort |
 |---|---|---|---|
-| 1 | **Index WHERE columns** | 10–100x | 1 min |
-| 2 | **Index JOIN keys (FK)** | 5–50x | 1 min |
-| 3 | **Use INNER not LEFT** (if possible) | 2–5x | 2 min |
-| 4 | **LIMIT early in aggregation** | 5–10x | 3 min |
-| 5 | **Filter before GROUP BY** | 2–10x | 3 min |
-| 6 | **Move filter into CTE** | 3–10x | 2 min |
-| 7 | **Use DISTINCT ON not GROUP BY** (if possible) | 2–3x | 3 min |
-| 8 | **Pre-aggregate large tables** | 10–100x | 10 min |
-| 9 | **Partition by date/range** | 2–10x | 30 min |
-| 10 | **Make index covering (INCLUDE)** | 2–5x | 3 min |
-| 11 | **Increase work_mem** (if sorting/hashing) | 2–10x | 2 min |
-| 12 | **Run VACUUM ANALYZE** (stale stats) | 2–10x | 1 min |
-| 13 | **Use EXISTS not IN** (with subquery) | 2–5x | 2 min |
-| 14 | **SELECT only needed columns** | 1–2x | 1 min |
-| 15 | **Avoid expression in WHERE** (e.g., EXTRACT) | 2–5x | 5 min |
+| 1 | **Index WHERE columns** | 10-100x | 1 min |
+| 2 | **Index JOIN keys (FK)** | 5-50x | 1 min |
+| 3 | **Use INNER not LEFT** (if possible) | 2-5x | 2 min |
+| 4 | **LIMIT early in aggregation** | 5-10x | 3 min |
+| 5 | **Filter before GROUP BY** | 2-10x | 3 min |
+| 6 | **Move filter into CTE** | 3-10x | 2 min |
+| 7 | **Use DISTINCT ON not GROUP BY** (if possible) | 2-3x | 3 min |
+| 8 | **Pre-aggregate large tables** | 10-100x | 10 min |
+| 9 | **Partition by date/range** | 2-10x | 30 min |
+| 10 | **Make index covering (INCLUDE)** | 2-5x | 3 min |
+| 11 | **Increase work_mem** (if sorting/hashing) | 2-10x | 2 min |
+| 12 | **Run VACUUM ANALYZE** (stale stats) | 2-10x | 1 min |
+| 13 | **Use EXISTS not IN** (with subquery) | 2-5x | 2 min |
+| 14 | **SELECT only needed columns** | 1-2x | 1 min |
+| 15 | **Avoid expression in WHERE** (e.g., EXTRACT) | 2-5x | 5 min |
 
 ---
 

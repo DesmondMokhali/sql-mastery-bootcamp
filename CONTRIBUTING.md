@@ -285,11 +285,11 @@ This bootcamp is built on respect and inclusion. We are committed to providing a
 
 ### Expected Behavior
 
-- **Be respectful** — Treat everyone with kindness, even in disagreement
-- **Be inclusive** — Welcome questions from beginners without judgment
-- **Be constructive** — Feedback should help, not hurt
-- **Be honest** — If you made a mistake, acknowledge it and fix it
-- **Be patient** — Teaching takes time; learning takes time
+- **Be respectful** - Treat everyone with kindness, even in disagreement
+- **Be inclusive** - Welcome questions from beginners without judgment
+- **Be constructive** - Feedback should help, not hurt
+- **Be honest** - If you made a mistake, acknowledge it and fix it
+- **Be patient** - Teaching takes time; learning takes time
 
 ### Unacceptable Behavior
 
@@ -309,11 +309,11 @@ If you witness or experience unacceptable behavior, please report it to the main
 
 ### What We Look For
 
-1. **Clarity** — Is the contribution clear and well-explained?
-2. **Correctness** — Is the SQL correct? Are explanations accurate?
-3. **Alignment** — Does it fit the bootcamp's goals and structure?
-4. **Quality** — Does it meet the style guides above?
-5. **Completeness** — For exercises: is there a solution? For fixes: is it thorough?
+1. **Clarity** - Is the contribution clear and well-explained?
+2. **Correctness** - Is the SQL correct? Are explanations accurate?
+3. **Alignment** - Does it fit the bootcamp's goals and structure?
+4. **Quality** - Does it meet the style guides above?
+5. **Completeness** - For exercises: is there a solution? For fixes: is it thorough?
 
 ### What Happens Next
 
@@ -359,7 +359,7 @@ Files: docs/postgres-16-supplement.md
 - **How do I report a bug?** Open an issue (use the bug template)
 - **Can I add a whole new day?** Probably! Open an issue first to discuss scope
 - **Can I translate the bootcamp?** Yes! We love translations. Coordinate in an issue first
-- **I want to improve the pedagogy** — Great! Open an issue to discuss approach before investing time
+- **I want to improve the pedagogy** - Great! Open an issue to discuss approach before investing time
 - **Can I use this for my own course?** Yes! The MIT license allows it. Just credit the original (as required by the license)
 
 ---

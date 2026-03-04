@@ -1,6 +1,6 @@
 # 📦 Day 7: Views, Procedures & Triggers
 **Wednesday, 11 March 2026**  
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| 09:00–09:45 | Views (Standard & Materialized) | 45 min | Abstraction, reusability |
-| 09:45–10:30 | Stored Procedures Fundamentals | 45 min | Writing, executing, control flow |
-| 10:30–11:15 | Triggers (Before, After, INSTEAD OF) | 45 min | Automation, data integrity |
-| 11:15–12:00 | Temp Tables vs CTEs vs Views | 45 min | When to use what |
-| 12:00–13:00 | **Lunch Break** | 60 min | – |
-| 13:00–13:45 | Plan Cache & Performance Implications | 45 min | Procedure caching, sniffing |
-| 13:45–14:30 | Lab Exercises 1–3 | 45 min | Hands-on coding |
-| 14:30–15:15 | Lab Exercises 4–5 | 45 min | Pressure scenario |
-| 15:15–15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
+| 09:00-09:45 | Views (Standard & Materialized) | 45 min | Abstraction, reusability |
+| 09:45-10:30 | Stored Procedures Fundamentals | 45 min | Writing, executing, control flow |
+| 10:30-11:15 | Triggers (Before, After, INSTEAD OF) | 45 min | Automation, data integrity |
+| 11:15-12:00 | Temp Tables vs CTEs vs Views | 45 min | When to use what |
+| 12:00-13:00 | **Lunch Break** | 60 min | - |
+| 13:00-13:45 | Plan Cache & Performance Implications | 45 min | Procedure caching, sniffing |
+| 13:45-14:30 | Lab Exercises 1-3 | 45 min | Hands-on coding |
+| 14:30-15:15 | Lab Exercises 4-5 | 45 min | Pressure scenario |
+| 15:15-15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
 
 ---
 
@@ -257,7 +257,7 @@ SELECT * FROM temp_driver_summary WHERE total_revenue > 1000;
 
 ## 🧪 Lab Exercises (Uber Database)
 
-### Lab 1: Create a View — Active Drivers Dashboard
+### Lab 1: Create a View - Active Drivers Dashboard
 **Create a view `vw_active_drivers_performance` showing: driver name, city, trip count, avg rating, total revenue, status.**
 
 ```sql
@@ -285,7 +285,7 @@ WHERE d.is_active = true
 GROUP BY d.id, d.name, d.city, d.is_active, d.rating;
 ```
 
-### Lab 2: Stored Procedure — Complete a Trip
+### Lab 2: Stored Procedure - Complete a Trip
 **Create procedure `complete_trip(p_trip_id INT)` that:**
 - **Updates trip status to 'completed'**
 - **Inserts review record (reviewer_id = 1, rating = random 3-5)**
@@ -333,7 +333,7 @@ $$;
 CALL complete_trip(42);
 ```
 
-### Lab 3: Trigger — Enforce Payment Status
+### Lab 3: Trigger - Enforce Payment Status
 **Create trigger that prevents trip completion if payment status is NOT 'success'.**
 
 ```sql
@@ -368,7 +368,7 @@ FOR EACH ROW
 EXECUTE FUNCTION check_payment_before_trip_complete();
 ```
 
-### Lab 4: Materialized View — Monthly Revenue Report
+### Lab 4: Materialized View - Monthly Revenue Report
 **Create materialized view `mv_monthly_revenue` with: year, month, city, total_revenue, trip_count, avg_fare.**
 
 ```sql
@@ -397,7 +397,7 @@ ORDER BY year DESC, month DESC, total_revenue DESC;
 CREATE INDEX idx_monthly_revenue_city ON mv_monthly_revenue(city);
 ```
 
-### Lab 5: Pressure Scenario — Insert Suddenly Slow
+### Lab 5: Pressure Scenario - Insert Suddenly Slow
 **PRESSURE: After adding an audit trigger, INSERT trips became 10x slower. Fix it.**
 
 **Scenario:**
@@ -526,7 +526,7 @@ BEGIN
   -- PROBLEM: Doing audit for EVERY single trip
   INSERT INTO trip_audit SELECT * FROM trips WHERE id = NEW.id;
   
-  -- PROBLEM 2: Synchronous — blocks user transaction
+  -- PROBLEM 2: Synchronous - blocks user transaction
   PERFORM heavy_ml_fraud_check(NEW.id);
   
   RETURN NEW;
@@ -536,9 +536,9 @@ $$ LANGUAGE plpgsql;
 
 ### Root Causes
 
-1. **Synchronous trigger** — User waits for trigger completion.
-2. **Row-level overhead** — Runs for every row (bulk inserts are murdered).
-3. **Extra work** — Unnecessary SELECT, fraud checks on all trips.
+1. **Synchronous trigger** - User waits for trigger completion.
+2. **Row-level overhead** - Runs for every row (bulk inserts are murdered).
+3. **Extra work** - Unnecessary SELECT, fraud checks on all trips.
 
 ### Solution
 
@@ -578,9 +578,9 @@ EXECUTE FUNCTION audit_trip_insert_async();
 - [ ] Can spot synchronous trigger performance problems
 - [ ] Understand plan cache & parameter sniffing
 - [ ] Know when to use temp table vs view
-- [ ] Attempted Lab 1–5 without solutions
+- [ ] Attempted Lab 1-5 without solutions
 - [ ] Can explain trigger overhead in own words
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 

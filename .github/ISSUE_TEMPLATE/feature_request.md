@@ -16,13 +16,13 @@ assignees: ''
 
 ## 🎯 Type of Feature
 
-- [ ] **New exercises** — additional practice problems
-- [ ] **New content** — additional day guide or supplementary material
-- [ ] **Improved explanation** — better way to teach existing concept
-- [ ] **New tool/resource** — tool, template, or resource to help learning
-- [ ] **Translation** — translate existing content to another language
-- [ ] **Enhancement** — improve existing feature (e.g., better formatting, more examples)
-- [ ] **Supplementary material** — interview prep, glossary entries, video recommendations, etc.
+- [ ] **New exercises** - additional practice problems
+- [ ] **New content** - additional day guide or supplementary material
+- [ ] **Improved explanation** - better way to teach existing concept
+- [ ] **New tool/resource** - tool, template, or resource to help learning
+- [ ] **Translation** - translate existing content to another language
+- [ ] **Enhancement** - improve existing feature (e.g., better formatting, more examples)
+- [ ] **Supplementary material** - interview prep, glossary entries, video recommendations, etc.
 - [ ] **Other:** _______________
 
 ---
@@ -136,9 +136,9 @@ GROUP BY city;
 ## ⏱️ Priority
 
 **How important is this feature?**
-- [ ] **Nice to have** — Would improve experience but not critical
-- [ ] **Important** — Significant improvement; should be prioritized
-- [ ] **Critical** — Addresses a major gap or issue; should be done ASAP
+- [ ] **Nice to have** - Would improve experience but not critical
+- [ ] **Important** - Significant improvement; should be prioritized
+- [ ] **Critical** - Addresses a major gap or issue; should be done ASAP
 
 ---
 

@@ -1,5 +1,5 @@
-# ⚙️ Day 4: Functions, NULL & CASE — Transforming Data Safely
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+# ⚙️ Day 4: Functions, NULL & CASE - Transforming Data Safely
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -18,21 +18,21 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| **09:00–10:30** | Core Theory + Structured Watching | 90 min | Functions, NULL logic, CASE statements |
-| **10:30–10:40** | Transition Buffer | 10 min | Rest & notes review |
-| **10:40–11:55** | Lab Engineering | 75 min | Progressive function exercises |
-| **11:55–12:05** | Transition Buffer | 10 min | Hydrate & reset |
-| **12:05–12:35** | Recap Session | 30 min | Consolidate learning |
-| **12:35–12:45** | Transition Buffer | 10 min | Mental break |
-| **12:45–13:30** | Deep Dive / Engine Thinking | 45 min | Function optimization, index usage |
-| **13:30–13:40** | Transition Buffer | 10 min | Prepare for assessment |
-| **13:40–14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
+| **09:00-10:30** | Core Theory + Structured Watching | 90 min | Functions, NULL logic, CASE statements |
+| **10:30-10:40** | Transition Buffer | 10 min | Rest & notes review |
+| **10:40-11:55** | Lab Engineering | 75 min | Progressive function exercises |
+| **11:55-12:05** | Transition Buffer | 10 min | Hydrate & reset |
+| **12:05-12:35** | Recap Session | 30 min | Consolidate learning |
+| **12:35-12:45** | Transition Buffer | 10 min | Mental break |
+| **12:45-13:30** | Deep Dive / Engine Thinking | 45 min | Function optimization, index usage |
+| **13:30-13:40** | Transition Buffer | 10 min | Prepare for assessment |
+| **13:40-14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
 
 ---
 
 ## 🎯 Core Focus Topics
 
-### 1. String Functions — Manipulating Text
+### 1. String Functions - Manipulating Text
 
 String functions transform, extract, or analyze text data. Common ones:
 
@@ -69,7 +69,7 @@ SELECT SPLIT_PART('Alice,Bob,Charlie', ',', 2);  -- 'Bob' (2nd element)
 
 ---
 
-### 2. Numeric Functions — Math and Aggregation
+### 2. Numeric Functions - Math and Aggregation
 
 Numeric functions perform calculations and transformations on numbers:
 
@@ -103,7 +103,7 @@ SELECT AVG(fare), MIN(fare), MAX(fare), SUM(fare) FROM trips;
 
 ---
 
-### 3. Date/Time Functions — Handling Temporal Data
+### 3. Date/Time Functions - Handling Temporal Data
 
 Date functions manipulate timestamps and dates:
 
@@ -144,7 +144,7 @@ SELECT CURRENT_DATE::TIMESTAMP;          -- Same with :: shorthand
 
 ---
 
-### 4. NULL Behavior — Three-Valued Logic
+### 4. NULL Behavior - Three-Valued Logic
 
 NULL represents unknown or missing data. NULL has special rules:
 
@@ -197,7 +197,7 @@ AND Truth Table:         OR Truth Table:
 
 ---
 
-### 5. CASE Expression — Conditional Logic
+### 5. CASE Expression - Conditional Logic
 
 **CASE** allows conditional logic in SQL (like if/else in programming):
 
@@ -287,7 +287,7 @@ SELECT * FROM drivers WHERE name = UPPER('alice');  -- Can use index on name
 
 ---
 
-### 7. SARGable Predicates — Index-Friendly Conditions
+### 7. SARGable Predicates - Index-Friendly Conditions
 
 **SARG** = Searchable Argument. A **SARGable** predicate can use an index.
 
@@ -337,7 +337,7 @@ SELECT * FROM drivers WHERE rating < 4.5 OR rating > 4.5;
 
 ## 🔧 Lab Engineering: Progressive SQL Exercises
 
-### Exercise 1: Easy — String and Date Functions
+### Exercise 1: Easy - String and Date Functions
 
 **Task:** Create a driver directory showing name (uppercase), city, days active, and account age in years.
 
@@ -360,7 +360,7 @@ ORDER BY years_active DESC;
 
 ---
 
-### Exercise 2: Medium — CASE with Multiple Conditions
+### Exercise 2: Medium - CASE with Multiple Conditions
 
 **Task:** Categorize trips by fare tier and status, showing completion percentage.
 
@@ -386,7 +386,7 @@ ORDER BY fare_tier DESC, completion_pct DESC;
 
 ---
 
-### Exercise 3: Hard — NULL Handling with Complex Logic
+### Exercise 3: Hard - NULL Handling with Complex Logic
 
 **Task:** Find drivers with incomplete payment records (missing payments, NULLs, or stale reviews). Flag data quality issues.
 
@@ -420,7 +420,7 @@ HAVING COUNT(CASE WHEN p.id IS NULL THEN 1 END) > 0
 
 ---
 
-### Exercise 4: Challenge — SARGable Predicates and Function Optimization
+### Exercise 4: Challenge - SARGable Predicates and Function Optimization
 
 **Task:** Find high-value trips completed in Q1 2026 with premium drivers, using index-friendly queries.
 
@@ -460,7 +460,7 @@ CREATE INDEX idx_trips_status_fare_completed
 
 ---
 
-### Exercise 5: Stretch — Complex Nested CASE with Window Functions
+### Exercise 5: Stretch - Complex Nested CASE with Window Functions
 
 **Task:** Rank drivers by performance (completion rate, avg fare, rating), categorize by percentile, show improvement vs previous period.
 
@@ -673,7 +673,7 @@ EXPLAIN SELECT * FROM drivers WHERE city = 'NYC';
 -- Even without function, if selectivity is low, optimizer might choose Seq Scan
 SELECT COUNT(*) FROM drivers WHERE city = 'NYC';
 -- Result: 50,000 rows (out of 100,000 total)
--- Selectivity: 50% — Seq Scan might be chosen (touching 50% of table anyway)
+-- Selectivity: 50% - Seq Scan might be chosen (touching 50% of table anyway)
 
 -- Optimizer decision:
 -- Seq Scan: Read 100k rows sequentially (fast I/O)

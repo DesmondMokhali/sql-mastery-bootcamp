@@ -1,5 +1,5 @@
-# 📚 Day 1: SQL Foundations — Building the Mental Model
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+# 📚 Day 1: SQL Foundations - Building the Mental Model
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -18,23 +18,23 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| **09:00–10:30** | Core Theory + Structured Watching | 90 min | Database fundamentals, logical query processing |
-| **10:30–10:40** | Transition Buffer | 10 min | Rest & notes review |
-| **10:40–11:55** | Lab Engineering | 75 min | Progressive SQL exercises |
-| **11:55–12:05** | Transition Buffer | 10 min | Hydrate & reset |
-| **12:05–12:35** | Recap Session | 30 min | Consolidate learning |
-| **12:35–12:45** | Transition Buffer | 10 min | Mental break |
-| **12:45–13:30** | Deep Dive / Engine Thinking | 45 min | Storage engine internals |
-| **13:30–13:40** | Transition Buffer | 10 min | Prepare for assessment |
-| **13:40–14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
+| **09:00-10:30** | Core Theory + Structured Watching | 90 min | Database fundamentals, logical query processing |
+| **10:30-10:40** | Transition Buffer | 10 min | Rest & notes review |
+| **10:40-11:55** | Lab Engineering | 75 min | Progressive SQL exercises |
+| **11:55-12:05** | Transition Buffer | 10 min | Hydrate & reset |
+| **12:05-12:35** | Recap Session | 30 min | Consolidate learning |
+| **12:35-12:45** | Transition Buffer | 10 min | Mental break |
+| **12:45-13:30** | Deep Dive / Engine Thinking | 45 min | Storage engine internals |
+| **13:30-13:40** | Transition Buffer | 10 min | Prepare for assessment |
+| **13:40-14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
 
 ---
 
 ## 🎯 Core Focus Topics
 
-### 1. Database vs Table vs Row vs Column — The Hierarchy
+### 1. Database vs Table vs Row vs Column - The Hierarchy
 
-A **database** is a collection of related tables and metadata. Think of it as a filing cabinet. A **table** is a structured dataset with rows and columns—like a spreadsheet. A **row** (or tuple) is a single record. A **column** (or attribute) is a field.
+A **database** is a collection of related tables and metadata. Think of it as a filing cabinet. A **table** is a structured dataset with rows and columns-like a spreadsheet. A **row** (or tuple) is a single record. A **column** (or attribute) is a field.
 
 ```sql
 -- Example: Uber-style drivers table structure
@@ -53,7 +53,7 @@ CREATE TABLE drivers (
 
 ---
 
-### 2. Primary Key — The Foundation of Identity
+### 2. Primary Key - The Foundation of Identity
 
 A **Primary Key** is a column (or set of columns) that uniquely identifies each row. It enforces:
 - **Uniqueness:** No two rows can have the same PK value
@@ -80,17 +80,17 @@ CREATE TABLE reviews (
 
 ---
 
-### 3. Logical Query Processing Order — How SQL "Thinks"
+### 3. Logical Query Processing Order - How SQL "Thinks"
 
 SQL doesn't execute in the order it's written. Instead, the database engine follows **Logical Query Processing Order:**
 
-1. **FROM** — Which tables?
-2. **WHERE** — Which rows?
-3. **GROUP BY** — Aggregate rows
-4. **HAVING** — Filter groups
-5. **SELECT** — Which columns?
-6. **ORDER BY** — Sort results
-7. **LIMIT** — Top N rows
+1. **FROM** - Which tables?
+2. **WHERE** - Which rows?
+3. **GROUP BY** - Aggregate rows
+4. **HAVING** - Filter groups
+5. **SELECT** - Which columns?
+6. **ORDER BY** - Sort results
+7. **LIMIT** - Top N rows
 
 ```sql
 -- Example demonstrating logical order
@@ -112,7 +112,7 @@ LIMIT 5;                    -- Step 7: Top 5 results
 
 ---
 
-### 4. SELECT Execution Flow — From Bytes to Results
+### 4. SELECT Execution Flow - From Bytes to Results
 
 When you run a SELECT query, the database:
 1. **Finds candidate rows** using indexes or table scans
@@ -136,9 +136,9 @@ When you run a SELECT query, the database:
 
 ---
 
-### 5. Intro to EXPLAIN — Reading the Query Plan
+### 5. Intro to EXPLAIN - Reading the Query Plan
 
-`EXPLAIN` shows the **query plan**—the engine's step-by-step strategy for executing your query.
+`EXPLAIN` shows the **query plan**-the engine's step-by-step strategy for executing your query.
 
 ```sql
 EXPLAIN SELECT * FROM drivers WHERE city = 'San Francisco';
@@ -237,7 +237,7 @@ CREATE TABLE reviews (
 
 ---
 
-### Exercise 1: Easy — Basic Table Scan & SELECT
+### Exercise 1: Easy - Basic Table Scan & SELECT
 
 **Task:** Get the name and rating of all active drivers in San Francisco.
 
@@ -253,7 +253,7 @@ WHERE is_active = true
 
 ---
 
-### Exercise 2: Medium — Adding Conditions & WHERE Logic
+### Exercise 2: Medium - Adding Conditions & WHERE Logic
 
 **Task:** Find all trips that were completed in the last 30 days with fare > $25. Order by fare descending.
 
@@ -271,7 +271,7 @@ ORDER BY fare DESC;
 
 ---
 
-### Exercise 3: Hard — Aggregation with GROUP BY
+### Exercise 3: Hard - Aggregation with GROUP BY
 
 **Task:** List drivers with their trip count and average fare, but only for drivers with 5+ completed trips.
 
@@ -292,7 +292,7 @@ ORDER BY avg_fare DESC;
 
 ---
 
-### Exercise 4: Challenge — Multiple Conditions & Complex Filtering
+### Exercise 4: Challenge - Multiple Conditions & Complex Filtering
 
 **Task:** Find active drivers in San Francisco with an average rating ≥ 4.5 who completed at least 10 trips in the last 60 days.
 
@@ -321,7 +321,7 @@ ORDER BY d.rating DESC;
 
 ---
 
-### Exercise 5: Stretch — Multiple Aggregations & Subquery Thinking
+### Exercise 5: Stretch - Multiple Aggregations & Subquery Thinking
 
 **Task:** Find the top 3 drivers (by average rating) who completed trips in the last 30 days AND whose average fare was in the top quartile across all drivers. Include trip count and avg rating.
 
@@ -362,7 +362,7 @@ LIMIT 3;
 
 ## 🧠 Deep Dive: Storage Engine Internals
 
-### Heap Storage — How Data Lives on Disk
+### Heap Storage - How Data Lives on Disk
 
 The **heap** is PostgreSQL's default table storage. Data is unordered; rows are appended as inserted.
 
@@ -386,13 +386,13 @@ Key: Rows are stored in insertion order, not sorted.
 
 **Sequential Scan (Seq Scan):**
 - Reads heap pages linearly from start to end
-- Cost: O(n) — must check every row
+- Cost: O(n) - must check every row
 - Acceptable for: Small tables, full-table aggregations
 - Example: `SELECT COUNT(*) FROM drivers` (must count all rows)
 
 ---
 
-### Index Scan — The B-Tree Advantage
+### Index Scan - The B-Tree Advantage
 
 An **index scan** uses a B-Tree to jump directly to relevant rows.
 
@@ -401,14 +401,14 @@ B-Tree Index (on city column):
 
                     ┌──────────────┐
                     │   Root Node   │
-                    │  (A–M | N–Z)  │
+                    │  (A-M | N-Z)  │
                     └────┬─────┬────┘
                          │     │
             ┌────────────┘     └──────────────┐
             │                                 │
         ┌───┴───┐                         ┌───┴───┐
         │Leaf:A │                         │Leaf:N │
-        │–M     │                         │–Z     │
+        │-M     │                         │-Z     │
         │Ptrs→  │                         │Ptrs→  │
         └───────┘                         └───────┘
             │                                 │

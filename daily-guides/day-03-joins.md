@@ -1,5 +1,5 @@
-# 🔗 Day 3: Joins — Combining Data from Multiple Tables
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+# 🔗 Day 3: Joins - Combining Data from Multiple Tables
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -18,21 +18,21 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| **09:00–10:30** | Core Theory + Structured Watching | 90 min | Join types, join predicates, cardinality |
-| **10:30–10:40** | Transition Buffer | 10 min | Rest & notes review |
-| **10:40–11:55** | Lab Engineering | 75 min | Progressive join exercises |
-| **11:55–12:05** | Transition Buffer | 10 min | Hydrate & reset |
-| **12:05–12:35** | Recap Session | 30 min | Consolidate learning |
-| **12:35–12:45** | Transition Buffer | 10 min | Mental break |
-| **12:45–13:30** | Deep Dive / Engine Thinking | 45 min | Join algorithms, cardinality estimation |
-| **13:30–13:40** | Transition Buffer | 10 min | Prepare for assessment |
-| **13:40–14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
+| **09:00-10:30** | Core Theory + Structured Watching | 90 min | Join types, join predicates, cardinality |
+| **10:30-10:40** | Transition Buffer | 10 min | Rest & notes review |
+| **10:40-11:55** | Lab Engineering | 75 min | Progressive join exercises |
+| **11:55-12:05** | Transition Buffer | 10 min | Hydrate & reset |
+| **12:05-12:35** | Recap Session | 30 min | Consolidate learning |
+| **12:35-12:45** | Transition Buffer | 10 min | Mental break |
+| **12:45-13:30** | Deep Dive / Engine Thinking | 45 min | Join algorithms, cardinality estimation |
+| **13:30-13:40** | Transition Buffer | 10 min | Prepare for assessment |
+| **13:40-14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
 
 ---
 
 ## 🎯 Core Focus Topics
 
-### 1. INNER JOIN — Only Matching Rows
+### 1. INNER JOIN - Only Matching Rows
 
 An **INNER JOIN** returns rows where the join condition is true *on both sides*. Non-matching rows are discarded.
 
@@ -73,7 +73,7 @@ ID | Name       | Trip_ID
 
 ---
 
-### 2. LEFT JOIN — All Rows from Left Table
+### 2. LEFT JOIN - All Rows from Left Table
 
 A **LEFT JOIN** returns *all rows from the left table*, plus matching rows from the right table. Non-matches get NULL.
 
@@ -115,7 +115,7 @@ ID | Name       | Trip_ID | Fare
 
 ---
 
-### 3. RIGHT JOIN — All Rows from Right Table
+### 3. RIGHT JOIN - All Rows from Right Table
 
 A **RIGHT JOIN** is the reverse of LEFT JOIN: all rows from the *right* table, with matching rows from the left.
 
@@ -147,7 +147,7 @@ SELECT * FROM trips t LEFT JOIN drivers d ON ...
 
 ---
 
-### 4. FULL OUTER JOIN — All Rows from Both Tables
+### 4. FULL OUTER JOIN - All Rows from Both Tables
 
 A **FULL OUTER JOIN** returns *all rows from both tables*. Rows with no match get NULL on the non-matching side.
 
@@ -192,7 +192,7 @@ Result: A-X, A-Y, B-NULL, C-NULL, NULL-Z
 
 ---
 
-### 5. Join Predicates — The Heart of Joins
+### 5. Join Predicates - The Heart of Joins
 
 The **ON clause** defines the join condition. It determines which rows from left and right tables are considered "matching."
 
@@ -240,7 +240,7 @@ WHERE t.status = 'completed' OR t.status IS NULL;
 
 ---
 
-### 6. Cartesian Products — The Anti-Pattern
+### 6. Cartesian Products - The Anti-Pattern
 
 A **Cartesian product** occurs when there's no join condition, resulting in *every* row from the left table matched with *every* row from the right table. It's almost always unintentional.
 
@@ -297,7 +297,7 @@ INNER JOIN trips t ON d.id = t.driver_id;
 
 ## 🔧 Lab Engineering: Progressive SQL Exercises
 
-### Exercise 1: Easy — Simple INNER JOIN
+### Exercise 1: Easy - Simple INNER JOIN
 
 **Task:** Get all completed trips with driver names and rider names.
 
@@ -320,7 +320,7 @@ ORDER BY t.completed_at DESC;
 
 ---
 
-### Exercise 2: Medium — LEFT JOIN with NULL Handling
+### Exercise 2: Medium - LEFT JOIN with NULL Handling
 
 **Task:** List all drivers with their trip count (including drivers with no trips yet).
 
@@ -342,7 +342,7 @@ ORDER BY trip_count DESC;
 
 ---
 
-### Exercise 3: Hard — Complex Join with Multiple Predicates
+### Exercise 3: Hard - Complex Join with Multiple Predicates
 
 **Task:** Find drivers who completed high-value trips (>$50) in their own city, with payment confirmation within 1 hour.
 
@@ -372,7 +372,7 @@ ORDER BY t.fare DESC;
 
 ---
 
-### Exercise 4: Challenge — FULL OUTER JOIN for Data Quality
+### Exercise 4: Challenge - FULL OUTER JOIN for Data Quality
 
 **Task:** Find data integrity issues: trips with no driver, drivers with trips no longer in system, and summarize by city.
 
@@ -398,7 +398,7 @@ ORDER BY city;
 
 ---
 
-### Exercise 5: Stretch — Multi-Table Join with Window Functions & Analytics
+### Exercise 5: Stretch - Multi-Table Join with Window Functions & Analytics
 
 **Task:** Find drivers in each city with their percentile ranking (by avg rating), trip velocity (trips/day), and comparison to city average.
 
@@ -452,7 +452,7 @@ ORDER BY ds.city, ds.rating DESC;
 
 ## 🧠 Deep Dive: Join Algorithms & Cardinality
 
-### Nested Loop Join — The Simple but Slow Algorithm
+### Nested Loop Join - The Simple but Slow Algorithm
 
 **Nested Loop Join** scans the outer table once, and for each row, scans the inner table.
 
@@ -505,7 +505,7 @@ ID=3 ────────────────→ Search for Driver 3 tri
 
 ---
 
-### Hash Join — The Fast Algorithm for Large Tables
+### Hash Join - The Fast Algorithm for Large Tables
 
 **Hash Join** builds a hash table from one table, then probes it with rows from the other.
 
@@ -553,7 +553,7 @@ drivers table: ID=1 → lookup hash(1) → [Trip 101, Trip 102]
 
 ---
 
-### Merge Join — Sorted Access
+### Merge Join - Sorted Access
 
 **Merge Join** works on pre-sorted tables, eliminating need for hashing or nested loops.
 
@@ -580,7 +580,7 @@ ORDER BY d.id;
 
 ---
 
-### Cardinality — Predicting Join Size
+### Cardinality - Predicting Join Size
 
 **Cardinality** is the number of rows; understanding it helps predict join output.
 
@@ -605,7 +605,7 @@ INNER JOIN trips t ON d.id = t.driver_id;
 
 ---
 
-### Selectivity — Filtering Impact
+### Selectivity - Filtering Impact
 
 **Selectivity** measures what fraction of rows match a condition.
 

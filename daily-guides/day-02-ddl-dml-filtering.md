@@ -1,5 +1,5 @@
-# 🏗️ Day 2: DDL, DML & Filtering — Building and Modifying Data
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+# 🏗️ Day 2: DDL, DML & Filtering - Building and Modifying Data
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -18,21 +18,21 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| **09:00–10:30** | Core Theory + Structured Watching | 90 min | DDL/DML fundamentals, ACID transactions |
-| **10:30–10:40** | Transition Buffer | 10 min | Rest & notes review |
-| **10:40–11:55** | Lab Engineering | 75 min | Progressive DDL/DML exercises |
-| **11:55–12:05** | Transition Buffer | 10 min | Hydrate & reset |
-| **12:05–12:35** | Recap Session | 30 min | Consolidate learning |
-| **12:35–12:45** | Transition Buffer | 10 min | Mental break |
-| **12:45–13:30** | Deep Dive / Engine Thinking | 45 min | MVCC and physical storage |
-| **13:30–13:40** | Transition Buffer | 10 min | Prepare for assessment |
-| **13:40–14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
+| **09:00-10:30** | Core Theory + Structured Watching | 90 min | DDL/DML fundamentals, ACID transactions |
+| **10:30-10:40** | Transition Buffer | 10 min | Rest & notes review |
+| **10:40-11:55** | Lab Engineering | 75 min | Progressive DDL/DML exercises |
+| **11:55-12:05** | Transition Buffer | 10 min | Hydrate & reset |
+| **12:05-12:35** | Recap Session | 30 min | Consolidate learning |
+| **12:35-12:45** | Transition Buffer | 10 min | Mental break |
+| **12:45-13:30** | Deep Dive / Engine Thinking | 45 min | MVCC and physical storage |
+| **13:30-13:40** | Transition Buffer | 10 min | Prepare for assessment |
+| **13:40-14:10** | Quiz + Pressure Simulation | 30 min | Apply knowledge under pressure |
 
 ---
 
 ## 🎯 Core Focus Topics
 
-### 1. DDL — Data Definition Language
+### 1. DDL - Data Definition Language
 
 **DDL** controls the *structure* of the database: creating, altering, and dropping tables, indexes, and schemas.
 
@@ -66,7 +66,7 @@ DROP TABLE IF EXISTS trips;
 
 ---
 
-### 2. DML — Data Manipulation Language
+### 2. DML - Data Manipulation Language
 
 **DML** operates on the *data* inside tables: inserting, updating, and deleting rows.
 
@@ -97,7 +97,7 @@ WHERE city = 'Denver' AND rating < 3.0;
 
 ---
 
-### 3. WHERE Clause Mechanics — Predicate Evaluation
+### 3. WHERE Clause Mechanics - Predicate Evaluation
 
 The WHERE clause filters rows using **predicates** (boolean conditions). Understanding predicate evaluation is crucial for both correctness and performance.
 
@@ -144,7 +144,7 @@ WHERE d.city = 'NYC';  -- Filter applied AFTER join
 
 ---
 
-### 4. Transactions Basics — ACID Guarantees
+### 4. Transactions Basics - ACID Guarantees
 
 A **transaction** is a sequence of SQL statements treated as a single unit. Transactions enforce ACID:
 
@@ -232,7 +232,7 @@ WHERE completed_at IS NOT NULL
 
 ## 🔧 Lab Engineering: Progressive SQL Exercises
 
-### Exercise 1: Easy — Basic INSERT and Simple WHERE
+### Exercise 1: Easy - Basic INSERT and Simple WHERE
 
 **Task:** Insert 3 new drivers and retrieve only those in San Francisco.
 
@@ -251,7 +251,7 @@ WHERE city = 'San Francisco';
 
 ---
 
-### Exercise 2: Medium — UPDATE with Conditional Filtering
+### Exercise 2: Medium - UPDATE with Conditional Filtering
 
 **Task:** Update ratings for all drivers in Los Angeles who haven't been active in 90+ days to mark them inactive.
 
@@ -267,7 +267,7 @@ WHERE city = 'Los Angeles'
 
 ---
 
-### Exercise 3: Hard — DELETE with Complex Filtering & Transaction Safety
+### Exercise 3: Hard - DELETE with Complex Filtering & Transaction Safety
 
 **Task:** Delete all cancelled trips from the last 30 days, but only for drivers no longer active. Use a transaction.
 
@@ -291,7 +291,7 @@ COMMIT;
 
 ---
 
-### Exercise 4: Challenge — Multi-Table Consistency with Foreign Keys & Transactions
+### Exercise 4: Challenge - Multi-Table Consistency with Foreign Keys & Transactions
 
 **Task:** Add a new trip, link it to an existing driver and rider, create a payment record, and ensure all are inserted atomically. Include a savepoint.
 
@@ -323,7 +323,7 @@ COMMIT;
 
 ---
 
-### Exercise 5: Stretch — Bulk UPDATE with Cascading Logic & NULL Handling
+### Exercise 5: Stretch - Bulk UPDATE with Cascading Logic & NULL Handling
 
 **Task:** Recalculate and update driver ratings based on their last 100 completed trips (using a subquery). Set rating to NULL for drivers with fewer than 10 trips.
 
@@ -356,9 +356,9 @@ WHERE d.id = rs.driver_id;
 
 ## 🧠 Deep Dive: MVCC and Physical UPDATE Process
 
-### MVCC — Multi-Version Concurrency Control
+### MVCC - Multi-Version Concurrency Control
 
-MVCC allows **readers** to access data while **writers** modify it—no locks needed. PostgreSQL maintains multiple versions of each row.
+MVCC allows **readers** to access data while **writers** modify it-no locks needed. PostgreSQL maintains multiple versions of each row.
 
 ```
 Timeline:
@@ -389,7 +389,7 @@ Reader C (T4) sees Version 2.
 
 ---
 
-### Physical UPDATE Process — What Really Happens
+### Physical UPDATE Process - What Really Happens
 
 When you UPDATE a row, PostgreSQL doesn't modify it in-place. Instead:
 
@@ -430,7 +430,7 @@ Index pointer: updated to point to new location (Page 2, Row N)
 
 ### Why DELETE Doesn't Immediately Remove Rows
 
-DELETE sets a **xmax** timestamp on the row, marking it as deleted for future transactions—but the row remains on disk.
+DELETE sets a **xmax** timestamp on the row, marking it as deleted for future transactions-but the row remains on disk.
 
 ```sql
 DELETE FROM drivers WHERE id = 1;
@@ -455,7 +455,7 @@ Result (in storage):
 
 ---
 
-### Table Bloat — The Hidden Problem
+### Table Bloat - The Hidden Problem
 
 Without regular VACUUM, dead tuples accumulate, causing **bloat**:
 

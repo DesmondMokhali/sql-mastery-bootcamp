@@ -1,6 +1,6 @@
 # 🏆 Day 10: Data Warehouse & Final Projects
 **Friday, 13 March 2026 (Extension)**  
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| 09:00–09:45 | Data Warehouse Fundamentals | 45 min | Bronze/Silver/Gold layers |
-| 09:45–10:30 | Fact & Dimension Tables | 45 min | Star schema design |
-| 10:30–11:15 | Slowly Changing Dimensions (SCD) | 45 min | Type 1, 2, 3 patterns |
-| 11:15–12:00 | Cardinality & Index Strategy | 45 min | Analytics optimization |
-| 12:00–13:00 | **Lunch Break** | 60 min | – |
-| 13:00–13:45 | Designing for Billion-Row Systems | 45 min | Partitioning, compression |
-| 13:45–14:30 | Final Project 1: Uber DWH | 45 min | Build Bronze → Silver → Gold |
-| 14:30–15:15 | Final Project 2: EDA & Analysis | 45 min | Exploratory data analysis |
-| 15:15–15:35 | Production Debugging Scenario | 20 min | Full system diagnosis |
+| 09:00-09:45 | Data Warehouse Fundamentals | 45 min | Bronze/Silver/Gold layers |
+| 09:45-10:30 | Fact & Dimension Tables | 45 min | Star schema design |
+| 10:30-11:15 | Slowly Changing Dimensions (SCD) | 45 min | Type 1, 2, 3 patterns |
+| 11:15-12:00 | Cardinality & Index Strategy | 45 min | Analytics optimization |
+| 12:00-13:00 | **Lunch Break** | 60 min | - |
+| 13:00-13:45 | Designing for Billion-Row Systems | 45 min | Partitioning, compression |
+| 13:45-14:30 | Final Project 1: Uber DWH | 45 min | Build Bronze → Silver → Gold |
+| 14:30-15:15 | Final Project 2: EDA & Analysis | 45 min | Exploratory data analysis |
+| 15:15-15:35 | Production Debugging Scenario | 20 min | Full system diagnosis |
 
 ---
 
@@ -636,7 +636,7 @@ DELETE FROM dashboard_cache WHERE table_name = 'gold_fact_trips';
 - [ ] Understand billion-row design considerations
 - [ ] Can diagnose real ETL failures (memory, timing)
 - [ ] Know incremental load patterns
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 

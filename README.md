@@ -1,225 +1,308 @@
-# 🗄️ SQL Mastery Bootcamp
+<div align="center">
 
-### Engineering-Level SQL in 10 Days — Free & Open Source
+# SQL Mastery Bootcamp
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Days](https://img.shields.io/badge/Duration-10%20Days-blue)
-![Level](https://img.shields.io/badge/Level-Engineering-red)
-![Database](https://img.shields.io/badge/Database-PostgreSQL-336791)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+### Engineering-Level SQL in 10 Days - Free and Open Source
 
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Duration](https://img.shields.io/badge/Duration-10%20Days-blue)](#the-10-day-plan)
+[![Level](https://img.shields.io/badge/Level-Engineering-red)](#what-youll-learn)
+[![Database](https://img.shields.io/badge/Database-PostgreSQL-336791)](https://www.postgresql.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Video](https://img.shields.io/badge/Video-30%20Hours-FF0000?logo=youtube)](https://www.youtube.com/watch?v=SSKVgrwhzus)
+[![Star](https://img.shields.io/github/stars/DesmondMokhali/sql-mastery-bootcamp?style=social)](https://github.com/DesmondMokhali/sql-mastery-bootcamp)
 
-## 💡 The Promise
+<br/>
 
-**Go from SQL beginner to thinking like a database engineer — in 10 structured days. Free forever.**
+**Go from SQL beginner to thinking like a database engineer - in 10 structured days.**
 
-SQL Mastery Bootcamp is an intensive, hands-on engineering program designed to take you from foundational SQL knowledge to production-grade database design and optimization. Built on real-world scenarios, pressure testing, and progressive complexity, this bootcamp prepares you for both technical interviews and actual engineering work.
+No installations. No fluff. Just PostgreSQL, real pressure scenarios, and a system that works.
 
----
+<br/>
 
-## 🎯 What You'll Learn
+[Get Started](#quick-start) · [View the Plan](#the-10-day-plan) · [Study Kit](#study-kit) · [Real-World Project](#real-world-project) · [AI Mentor](#ai-mentor-integration)
 
-- **SQL Foundations & SELECT Optimization** — master query writing and understand why certain queries perform better
-- **DDL/DML Operations & Data Filtering** — safely create, modify, and manipulate tables with precision
-- **Advanced JOIN Strategies** — understand join algorithms and write performant multi-table queries
-- **Functions, NULL Handling & CASE Logic** — write defensive SQL that handles edge cases gracefully
-- **Aggregates & Window Functions** — perform complex analytical queries without exploding your server memory
-- **Subqueries & CTEs** — structure complex logic into readable, maintainable SQL
-- **Views, Stored Procedures & Triggers** — abstract logic and enforce business rules at the database layer
-- **Indexes & Query Execution Plans** — read EXPLAIN output and transform 100-second queries into milliseconds
-- **Partitioning & Production Performance** — design tables that scale to billions of rows
-- **Data Warehouse Design & Real-World Project** — architect an Uber-style ride-sharing database from scratch
+</div>
 
 ---
 
-## 👥 Who This Is For
+## What You Will Learn
 
-- **Backend engineers** building APIs that touch databases
-- **Data analysts** querying and transforming data at scale
-- **Full-stack developers** wanting SQL expertise beyond ORM queries
-- **Technical interview candidates** preparing for system design & database questions
-- **Database enthusiasts** who want to think like a DBA, not just use SQL
+By the end of this bootcamp you will be able to:
 
-**No prerequisites required.** Just a browser and 10 days of commitment. ⏰
+- Write and optimize SQL queries with a deep understanding of how they execute
+- Read and interpret `EXPLAIN ANALYZE` output to diagnose slow queries
+- Design tables and indexes that perform at millions of rows
+- Understand MVCC, WAL, and what PostgreSQL does under the hood
+- Build a production-style data warehouse with Bronze, Silver, and Gold layers
+- Debug real-world engineering scenarios under pressure
 
----
-
-## 📅 The 10-Day Plan
-
-| Day | Dates | Topic | Pressure Scenario |
-|-----|-------|-------|-------------------|
-| 1 | Tue 3 Mar | SQL Foundations & SELECT | Primary key lookup mysteriously slow despite index |
-| 2 | Wed 4 Mar | DDL/DML/Filtering | Table disk space keeps growing after DELETEs |
-| 3 | Thu 5 Mar | Joins | Join that runs in 10ms suddenly takes 1 second after data grows |
-| 4 | Fri 6 Mar | Functions, NULL, CASE | Index exists but query still does full table scan |
-| 5 | Mon 9 Mar | Aggregates & Window Functions | Memory spike from window function at midnight |
-| 6 | Tue 10 Mar | Subqueries & CTEs | CTE is suspiciously slower than the subquery it replaced |
-| 7 | Wed 11 Mar | Views, Procedures, Triggers | INSERT speed dropped 10x after adding a trigger |
-| 8 | Thu 12 Mar | Indexes & Execution Plans | EXPLAIN shows 100 rows estimated but 1M rows actual |
-| 9 | Fri 13 Mar | Partitions & Performance | Query collapses under 100x load; time to partition |
-| 10 | Mon 16 Mar | DWH Design & Real Project | Build and debug an Uber-style ride-sharing database |
+| Day | Topic | You Will Master |
+|-----|-------|-----------------|
+| 1 | SQL Foundations and SELECT | Query execution flow, heap storage, index vs seq scan |
+| 2 | DDL, DML and Filtering | MVCC, dead tuples, VACUUM, ACID transactions |
+| 3 | Joins | Nested loop, hash join, cardinality, join predicates |
+| 4 | Functions, NULL and CASE | SARGability, predicate pushdown, three-valued logic |
+| 5 | Aggregates and Window Functions | Partitioning, frames, ranking, memory usage |
+| 6 | Subqueries and CTEs | Materialization, optimization barriers, execution trees |
+| 7 | Views, Procedures and Triggers | Trigger overhead, plan cache, hidden performance costs |
+| 8 | Indexes and Execution Plans | B-Tree internals, bitmap scan, cost-based optimizer |
+| 9 | Partitions and Performance | Partition pruning, parallel query, IO vs CPU bottlenecks |
+| 10 | Data Warehouse and Real Project | Star schema, fact/dimension tables, billion-row design |
 
 ---
 
-## ⏱️ Daily Schedule
+## Who This Is For
 
-Each day follows a structured 5 hours 10 minutes of learning:
+- **Backend engineers** building APIs on top of relational databases
+- **Data analysts** who want to go beyond SELECT and understand performance
+- **Full-stack developers** tired of relying on ORMs without understanding what runs underneath
+- **Interview candidates** preparing for SQL and system design rounds
+- **Anyone** who has used SQL but never truly understood it
 
-| Block | Duration | Activity |
-|-------|----------|----------|
-| **Morning Theory** | 1h 30min | Watch video lecture + read guide |
-| **Guided Practice** | 1h 20min | Follow along in DB Fiddle with provided schemas |
-| **Independent Exercises** | 1h 00min | Solve 3-5 problems; test your understanding |
-| **Pressure Simulation** | 0h 45min | Real-world scenario: diagnose & fix the problem |
-| **Reflection & Notes** | 0h 35min | Review your solutions, take notes, update tracker |
-
-**Daily commitment:** Start fresh each morning. No prerequisites from previous days (though cumulative mastery helps).
+> No prerequisites. Just a browser and 5 hours per day for 10 weekdays.
 
 ---
 
-## 📂 What's Inside
+## The 10-Day Plan
 
-```
-sql-mastery-bootcamp/
-├── README.md                          # This file
-├── LICENSE                            # MIT License
-├── CONTRIBUTING.md                    # How to contribute
-├── 00-setup/
-│   ├── getting-started.md            # Comprehensive onboarding guide
-│   ├── ai-mentor-prompts.md          # Prompts for AI coaching
-│   └── db-fiddle-setup.sql           # PostgreSQL schema for DB Fiddle
-├── day-01-foundations/
-│   ├── guide.md                      # Day 1 learning guide
-│   ├── exercises.sql                 # 5 practice exercises
-│   ├── solutions.sql                 # Annotated solutions
-│   └── pressure-scenario.md          # Real-world problem to solve
-├── day-02-ddl-dml/
-├── day-03-joins/
-├── day-04-functions/
-├── day-05-aggregates-window/
-├── day-06-subqueries-cte/
-├── day-07-views-procedures/
-├── day-08-indexes-explain/
-├── day-09-partitions-performance/
-├── day-10-dwh-project/
-├── .github/
-│   └── ISSUE_TEMPLATE/
-│       ├── bug_report.md             # Bug report template
-│       └── feature_request.md        # Feature request template
-└── docs/
-    ├── glossary.md                   # SQL & database terminology
-    └── postgres-reference.md         # PostgreSQL specific features
-```
+Each day follows the same structured 5 hours 10 minutes block:
+
+| Time | Block | Duration |
+|------|-------|----------|
+| 09:00 - 10:30 | Core Theory and Structured Watching | 90 min |
+| 10:30 - 10:40 | Transition Buffer | 10 min |
+| 10:40 - 11:55 | Lab Engineering | 75 min |
+| 11:55 - 12:05 | Transition Buffer | 10 min |
+| 12:05 - 12:35 | Recap Session | 30 min |
+| 12:35 - 12:45 | Transition Buffer | 10 min |
+| 12:45 - 13:30 | Deep Dive / Engine Thinking | 45 min |
+| 13:30 - 13:40 | Transition Buffer | 10 min |
+| 13:40 - 14:10 | Quiz and Pressure Simulation | 30 min |
+
+### Day-by-Day Breakdown
+
+| Day | Topic | Video Range | Pressure Scenario |
+|-----|-------|-------------|-------------------|
+| 1 | SQL Foundations and SELECT | 00:00 - 01:32:31 | Primary key lookup suddenly slow - why? |
+| 2 | DDL, DML and Filtering | 01:32:31 - 02:47:57 | Table size keeps growing after DELETEs |
+| 3 | Joins | 02:47:57 - 04:02:09 | Join suddenly 100x slower after data growth |
+| 4 | Functions, NULL and CASE | 04:02:09 - 08:43:36 | Index exists but query still doing Seq Scan |
+| 5 | Aggregates and Window Functions | 08:43:36 - 11:56:05 | Window function causes memory spike |
+| 6 | Subqueries and CTEs | 12:40:34 - 15:35:02 | CTE made query slower than subquery |
+| 7 | Views, Procedures and Triggers | 15:35:02 - 18:23:42 | Insert suddenly slow after trigger added |
+| 8 | Indexes and Execution Plans | 18:23:42 - 21:11:03 | Estimated rows 100, actual rows 1,000,000 |
+| 9 | Partitions and Performance | 21:11:03 - 22:24:25 | Query fine on small data, collapses at scale |
+| 10 | Data Warehouse and Real Project | 23:21:04 - 29:47:24 | Full production debugging scenario |
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### Step 1: Clone This Repository
+**No installation required. Works entirely in your browser.**
+
+### Step 1 - Set up your practice database
+
+1. Go to [db-fiddle.com](https://www.db-fiddle.com)
+2. Select **PostgreSQL 15** from the dropdown
+3. Copy and paste the contents of [`00-setup/db-fiddle-setup.sql`](00-setup/db-fiddle-setup.sql) into the left panel
+4. Click **Run** - your Uber-style ride-sharing database is ready
+
+### Step 2 - Activate your AI mentor
+
+1. Open [Claude](https://claude.ai), [ChatGPT](https://chat.openai.com), or [Gemini](https://gemini.google.com)
+2. Paste the **Master System Prompt** from [`00-setup/ai-mentor-prompts.md`](00-setup/ai-mentor-prompts.md)
+3. Paste the **Day 1 Morning Prompt** from the same file
+4. Your AI mentor is now activated and knows the full curriculum
+
+### Step 3 - Open Day 1 and begin
+
+Open [`daily-guides/day-01-sql-foundations.md`](daily-guides/day-01-sql-foundations.md) and follow the structured blocks.
+
 ```bash
-git clone https://github.com/mokhali/sql-mastery-bootcamp.git
+# Clone the repo
+git clone https://github.com/DesmondMokhali/sql-mastery-bootcamp.git
 cd sql-mastery-bootcamp
 ```
 
-### Step 2: Open the Setup Guide
-Read `00-setup/getting-started.md` — it takes 10 minutes and explains everything.
-
-### Step 3: Start Day 1
-Open `day-01-foundations/guide.md` and begin your journey.
-
-**That's it.** No installation, no setup. Just open DB Fiddle in your browser. ✨
+> That is all. No Docker. No local database setup. No configuration. Just open and learn.
 
 ---
 
-## 🚕 Real-World Project
+## Real-World Project
 
-The bootcamp uses a running case study: an **Uber-style ride-sharing database**. By Day 10, you'll have designed and debugged:
+Every lab session uses a real **Uber-style ride-sharing database** - not toy examples.
 
-- Drivers and passengers (with complex statuses)
-- Ride requests (matching algorithms)
-- Pricing logic (surge multipliers, tips)
-- Performance at scale (10M+ rides, partitioning, indexing)
+```sql
+drivers      -- drivers with ratings, cities, vehicle types
+riders       -- registered passengers
+trips        -- completed and active rides with geolocation
+payments     -- payment records per trip
+reviews      -- two-way driver and rider reviews
+driver_earnings -- earnings breakdown per trip
+```
 
-This isn't a toy database. It's a real problem space where SQL knowledge directly impacts user experience.
+By Day 10 you will have written queries that:
+- Find the top-rated drivers in each city using window functions
+- Detect payment fraud using correlated subqueries
+- Analyze surge pricing patterns using CTEs
+- Diagnose a slow query on 10 million trip records using EXPLAIN ANALYZE
+- Design a Bronze/Silver/Gold data warehouse layer on top of the raw data
 
----
-
-## 📚 Study Kit (12 Components)
-
-1. **Daily Guides** — 10 markdown guides (one per day) with video timestamps and learning outcomes
-2. **Video Lectures** — Full 30-hour video course (links provided in each day guide)
-3. **Exercise Sets** — 50+ hands-on SQL exercises with progressive difficulty
-4. **Annotated Solutions** — Every exercise solution with detailed comments explaining the "why"
-5. **Pressure Scenarios** — 10 real-world problems (query slowdown, data integrity, scale issues)
-6. **DB Fiddle Schemas** — Pre-built PostgreSQL schemas ready to paste into DB Fiddle
-7. **AI Mentor Prompts** — 50+ prompts to use with Claude, ChatGPT, or Gemini as your personal coach
-8. **Glossary** — SQL & database terminology (terms linked in guides)
-9. **PostgreSQL Reference** — Version-specific features and best practices
-10. **Mastery Tracker** — Self-assessment template to track your progress
-11. **Issue Templates** — How to report bugs or suggest improvements
-12. **Contributing Guide** — How to improve this bootcamp for others
+The full schema, seed data, and day-by-day practice queries are in [`real-world-project/`](real-world-project/).
 
 ---
 
-## 🤖 AI Mentor Integration
+## Study Kit
 
-Don't learn alone. Use the **AI Mentor Prompts** to get personalized coaching:
+This bootcamp includes 12 purpose-built study tools:
 
-1. Copy the **Master System Prompt** from `00-setup/ai-mentor-prompts.md`
-2. Paste it into Claude, ChatGPT, or Gemini
-3. Use the **Daily Morning Prompt** at the start of each session
-4. Describe your solution or problem; the AI coach gives Socratic feedback
-5. The AI simulates the pressure scenario and scores you out of 10
-
-This transforms a solo bootcamp into a guided learning experience. The AI knows the curriculum, knows PostgreSQL, and won't let you skip the hard parts.
+| # | Component | What It Does |
+|---|-----------|--------------|
+| 01 | [Topic Mastery Tracker](study-kit/01-topic-mastery-tracker.md) | Rate yourself 0-3 on 60+ topics after each session |
+| 02 | [8-Week Sprint Calendar](study-kit/02-sprint-calendar.md) | Extends beyond 10 days into interview prep and advanced topics |
+| 03 | [Structured Study Guide](study-kit/03-structured-study-guide.md) | The science behind spaced repetition and active recall |
+| 04 | [Active Recall Questions](study-kit/04-active-recall-questions.md) | 120+ questions organized by day with answer hints |
+| 05 | [Logic Flow Diagrams](study-kit/05-logic-flow-diagrams.md) | ASCII diagrams for B-Tree, joins, MVCC, DWH layers |
+| 06 | [Technical Cheat Sheet](study-kit/06-technical-cheat-sheet.md) | Dense 2-page SQL reference card |
+| 07 | [Comparison Tables](study-kit/07-comparison-tables.md) | Side-by-side comparisons of joins, indexes, CTEs, and more |
+| 08 | [Acronym and Glossary](study-kit/08-acronym-glossary.md) | 80+ terms with definitions and real-world context |
+| 09 | [Mock Exam Repository](study-kit/09-mock-exam-repository.md) | 3 full timed exams (60 questions total) with answer keys |
+| 10 | [The Error Log](study-kit/10-error-log.md) | Track mistakes, patterns, and your path to mastery |
+| 11 | [Flash Drill Cards](study-kit/11-flash-drill-cards.md) | 100 Q&A cards plus 20 rapid-fire speed round cards |
+| 12 | [Case Study Workbook](study-kit/12-case-study-workbook.md) | 10 production debugging case studies with full solutions |
 
 ---
 
-## 🎬 Video Resource & Credits
+## AI Mentor Integration
 
-This bootcamp is structured around an outstanding free video course. **Full credit and massive thanks to the original creator:**
+This is the first SQL bootcamp with a built-in AI mentor system.
+
+The [`00-setup/ai-mentor-prompts.md`](00-setup/ai-mentor-prompts.md) file contains:
+
+- **Master System Prompt** - activates your AI as "Coach", a strict PostgreSQL senior engineer
+- **10 Daily Morning Prompts** - one per day, pre-loaded with that day's topics and pressure scenario
+- **Transition Prompts** - paste when moving between session blocks
+- **Special Situation Prompts** - "I don't understand this", "quiz me", "run the pressure sim now"
+- **End of Plan Prompts** - performance review, gap analysis, interview readiness check
+
+Works with Claude (recommended), ChatGPT, and Gemini.
+
+```
+Morning routine:
+1. Open AI chat
+2. Paste Master System Prompt
+3. Paste Day X Morning Prompt
+4. Coach is activated - follow the blocks
+5. End of session: "Give me my score"
+```
+
+---
+
+## What's Inside
+
+```
+sql-mastery-bootcamp/
+|
++-- README.md
++-- LICENSE
++-- CONTRIBUTING.md
++-- .gitattributes
+|
++-- 00-setup/
+|   +-- getting-started.md         Complete onboarding guide
+|   +-- ai-mentor-prompts.md       All AI mentor prompts (master + 10 daily)
+|   +-- db-fiddle-setup.sql        Paste this into DB Fiddle to get started
+|   +-- calendar/
+|       +-- sql_mastery_10day.ics  Import into Google Calendar or Outlook
+|
++-- daily-guides/
+|   +-- day-01-sql-foundations.md
+|   +-- day-02-ddl-dml-filtering.md
+|   +-- day-03-joins.md
+|   +-- day-04-functions-null-case.md
+|   +-- day-05-aggregates-window-functions.md
+|   +-- day-06-subqueries-cte.md
+|   +-- day-07-views-procedures-triggers.md
+|   +-- day-08-indexes-execution-plans.md
+|   +-- day-09-partitions-performance.md
+|   +-- day-10-projects-dwh-eda.md
+|
++-- study-kit/
+|   +-- 01-topic-mastery-tracker.md
+|   +-- 02-sprint-calendar.md
+|   +-- 03-structured-study-guide.md
+|   +-- 04-active-recall-questions.md
+|   +-- 05-logic-flow-diagrams.md
+|   +-- 06-technical-cheat-sheet.md
+|   +-- 07-comparison-tables.md
+|   +-- 08-acronym-glossary.md
+|   +-- 09-mock-exam-repository.md
+|   +-- 10-error-log.md
+|   +-- 11-flash-drill-cards.md
+|   +-- 12-case-study-workbook.md
+|
++-- real-world-project/
+|   +-- README.md                  Database documentation and data dictionary
+|   +-- schema.sql                 Full PostgreSQL schema with indexes
+|   +-- seed-data.sql              Realistic sample data (50+ trips, 20 riders)
+|   +-- practice-queries.sql       Day-by-day practice queries
+|
++-- .github/
+    +-- ISSUE_TEMPLATE/
+        +-- bug_report.md
+        +-- feature_request.md
+```
+
+---
+
+## Video Resource and Credits
+
+This bootcamp is a structured learning framework built around an outstanding free video course.
+
+**Full credit and thanks to the original creator:**
 
 | | |
 |---|---|
-| **Video Title** | SQL Full Course for Beginners (30 Hours) – From Zero to Hero |
+| **Video** | SQL Full Course for Beginners (30 Hours) - From Zero to Hero |
 | **Creator** | [Data with Baraa](https://www.youtube.com/@DataWithBaraa) |
 | **Watch Free** | [youtube.com/watch?v=SSKVgrwhzus](https://www.youtube.com/watch?v=SSKVgrwhzus) |
-| **Duration** | ~30 Hours |
 
-> ⚠️ **Important:** This bootcamp is a **study framework** built on top of Baraa's video. All video content, explanations, and teaching belong to **Data with Baraa**. This repo adds structure, lab exercises, study tools, and AI mentor prompts to enhance your learning experience. Please watch, like, and subscribe to support the original creator!
+> This repo adds structure, lab exercises, a real-world database, AI mentor prompts, and a full study kit on top of Baraa's teaching. All video content and core instruction belong to **Data with Baraa**. Please watch, like, and subscribe to support the original creator.
 
-Each daily guide includes exact timestamps so you know exactly where to start and stop in the video each day.
-
----
-
-## 🤝 Contributing
-
-See `CONTRIBUTING.md` for detailed guidelines.
-
-**We welcome:**
-- New exercises and solutions
-- Bug fixes and clarifications
-- PostgreSQL optimizations
-- Translations
-- Additional day guides or supplements
+Each daily guide includes the exact video timestamp range so you know precisely where to start and stop each day.
 
 ---
 
-## 📄 License
+## Contributing
 
-MIT License © 2026 Mokhali
+Contributions make this bootcamp better for everyone.
 
-You are free to use, modify, and distribute this bootcamp for any purpose (personal, commercial, etc.). See `LICENSE` for details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+
+**Ways to contribute:**
+- Add new lab exercises for any day
+- Improve explanations or fix errors
+- Add translations to other languages
+- Share your pressure scenario solutions
+- Suggest new case studies
 
 ---
 
-## ❤️ Made with Love
+## License
 
-This bootcamp exists because SQL is too important to be boring. Written by **Mokhali**, a database engineer who believes practical, hands-on learning beats passive courses every time.
+MIT License - 2026 Mokhali
 
-**Questions?** Open an issue. **Ideas?** Submit a PR. **Loving it?** Star the repo. ⭐
+Free to use, modify, and distribute for any purpose. See [LICENSE](LICENSE) for details.
 
 ---
 
-**Ready to master SQL? [Start here →](00-setup/getting-started.md)**
+<div align="center">
+
+**Built by [Mokhali](https://github.com/DesmondMokhali) - because SQL is too important to be boring.**
+
+If this helped you, please star the repo. It helps others find it. ⭐
+
+[Start Learning Now](00-setup/getting-started.md)
+
+</div>

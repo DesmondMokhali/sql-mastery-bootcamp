@@ -5,7 +5,7 @@
 
 ## 📖 How to Use This Tracker
 
-**Rate yourself after each daily session** on a scale of 0–3:
+**Rate yourself after each daily session** on a scale of 0-3:
 
 - **0** = Not started / Never heard of it
 - **1** = Heard of it / Vague understanding
@@ -107,7 +107,7 @@
 
 ## 📈 Weekly Summary
 
-### Week 1: Core SQL (Days 1–5)
+### Week 1: Core SQL (Days 1-5)
 
 **Topics covered:**
 - SELECT, JOIN, GROUP BY, aggregation, window functions
@@ -119,12 +119,12 @@
 
 **Action items for next week:**
 - [ ] Revisit weak topics (review notes, rewatch videos)
-- [ ] Practice LeetCode SQL: Easy difficulty (3–5 problems)
-- [ ] Build personal project using Days 1–5 concepts
+- [ ] Practice LeetCode SQL: Easy difficulty (3-5 problems)
+- [ ] Build personal project using Days 1-5 concepts
 
 ---
 
-### Week 2: Advanced Queries (Days 6–7)
+### Week 2: Advanced Queries (Days 6-7)
 
 **Topics covered:**
 - Subqueries, CTEs, views, procedures, triggers
@@ -137,11 +137,11 @@
 **Action items for next week:**
 - [ ] Revisit CTEs and correlated subqueries (common interview topic)
 - [ ] Write 3 procedures from scratch
-- [ ] Practice LeetCode SQL: Medium difficulty (2–3 problems)
+- [ ] Practice LeetCode SQL: Medium difficulty (2-3 problems)
 
 ---
 
-### Week 3: Optimization & Scale (Days 8–10)
+### Week 3: Optimization & Scale (Days 8-10)
 
 **Topics covered:**
 - Indexes, execution plans, partitioning, data warehouse design
@@ -177,7 +177,7 @@
 
 **Complete after Day 10.**
 
-### Overall Confidence (1–10 scale)
+### Overall Confidence (1-10 scale)
 
 - **SQL Fundamentals (SELECT, JOIN, GROUP BY):** ______ / 10
 - **Window Functions & Analytics:** ______ / 10

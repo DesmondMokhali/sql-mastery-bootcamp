@@ -34,12 +34,12 @@ assignees: ''
 
 ## 🐛 Type of Bug
 
-- [ ] **Typo or grammar error** — misspelled word, grammatical mistake
-- [ ] **Factual error** — incorrect SQL syntax, wrong explanation, misleading information
-- [ ] **Broken link** — link is 404 or wrong
-- [ ] **Unclear explanation** — confusing wording, hard to understand
-- [ ] **Incorrect code** — SQL query doesn't work or has a bug
-- [ ] **Outdated content** — information is no longer accurate (e.g., PostgreSQL version changes)
+- [ ] **Typo or grammar error** - misspelled word, grammatical mistake
+- [ ] **Factual error** - incorrect SQL syntax, wrong explanation, misleading information
+- [ ] **Broken link** - link is 404 or wrong
+- [ ] **Unclear explanation** - confusing wording, hard to understand
+- [ ] **Incorrect code** - SQL query doesn't work or has a bug
+- [ ] **Outdated content** - information is no longer accurate (e.g., PostgreSQL version changes)
 - [ ] **Other:** _______________
 
 ---

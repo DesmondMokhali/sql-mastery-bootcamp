@@ -1,6 +1,6 @@
 # 🚀 Day 8: Indexes & Execution Plans
 **Thursday, 12 March 2026**  
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| 09:00–09:45 | B-Tree Index Structure | 45 min | Nodes, splits, balance |
-| 09:45–10:30 | Clustered vs Non-Clustered | 45 min | Postgres heap tables, leaf pages |
-| 10:30–11:15 | EXPLAIN ANALYZE Deep Dive | 45 min | Reading plans, cost model |
-| 11:15–12:00 | Bitmap Scans & Index Types | 45 min | BRIN, Hash, GIN |
-| 12:00–13:00 | **Lunch Break** | 60 min | – |
-| 13:00–13:45 | Statistics & ANALYZE | 45 min | pg_statistic, cardinality, selectivity |
-| 13:45–14:30 | Lab Exercises 1–3 | 45 min | Hands-on indexing |
-| 14:30–15:15 | Lab Exercises 4–5 | 45 min | Pressure scenario |
-| 15:15–15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
+| 09:00-09:45 | B-Tree Index Structure | 45 min | Nodes, splits, balance |
+| 09:45-10:30 | Clustered vs Non-Clustered | 45 min | Postgres heap tables, leaf pages |
+| 10:30-11:15 | EXPLAIN ANALYZE Deep Dive | 45 min | Reading plans, cost model |
+| 11:15-12:00 | Bitmap Scans & Index Types | 45 min | BRIN, Hash, GIN |
+| 12:00-13:00 | **Lunch Break** | 60 min | - |
+| 13:00-13:45 | Statistics & ANALYZE | 45 min | pg_statistic, cardinality, selectivity |
+| 13:45-14:30 | Lab Exercises 1-3 | 45 min | Hands-on indexing |
+| 14:30-15:15 | Lab Exercises 4-5 | 45 min | Pressure scenario |
+| 15:15-15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
 
 ---
 
@@ -242,7 +242,7 @@ ORDER BY avg_fare DESC
 LIMIT 10;
 ```
 
-### Lab 2: Diagnose Index Mismatch — Estimated vs Actual Rows
+### Lab 2: Diagnose Index Mismatch - Estimated vs Actual Rows
 **Run EXPLAIN ANALYZE. If estimated rows ≠ actual rows, update statistics.**
 
 ```sql
@@ -324,7 +324,7 @@ AND fare > 25;
 -- Expected output: Bitmap Heap Scan combining three indexes
 ```
 
-### Lab 5: Pressure Scenario — Estimated 100, Actual 1,000,000
+### Lab 5: Pressure Scenario - Estimated 100, Actual 1,000,000
 **PRESSURE: Planner estimates 100 rows but actually gets 1M. Query becomes O(n²). Fix.**
 
 **Scenario:**
@@ -498,8 +498,8 @@ LEFT JOIN reviews r ON rt.id = r.trip_id;
 - [ ] Know VACUUM ANALYZE updates statistics
 - [ ] Understand cost-based optimizer (seq_page_cost, random_page_cost)
 - [ ] Can diagnose estimated rows ≠ actual rows
-- [ ] Attempted Lab 1–5 without solutions
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+- [ ] Attempted Lab 1-5 without solutions
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 

@@ -1,6 +1,6 @@
 # ⚡ Day 9: Partitioning & Performance at Scale
 **Friday, 13 March 2026**  
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| 09:00–09:45 | Partitioning Strategies | 45 min | Range, List, Hash partitions |
-| 09:45–10:30 | Partition Pruning & Elimination | 45 min | How optimizer skips partitions |
-| 10:30–11:15 | Performance at Billion-Row Scale | 45 min | IO vs CPU bottlenecks |
-| 11:15–12:00 | Parallel Query Execution | 45 min | Work_mem, Shared Buffers, memory grants |
-| 12:00–13:00 | **Lunch Break** | 60 min | – |
-| 13:00–13:45 | 30 Quick Performance Tips | 45 min | Practical optimizations |
-| 13:45–14:30 | Lab Exercises 1–3 | 45 min | Hands-on partitioning |
-| 14:30–15:15 | Lab Exercises 4–5 | 45 min | Pressure scenario |
-| 15:15–15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
+| 09:00-09:45 | Partitioning Strategies | 45 min | Range, List, Hash partitions |
+| 09:45-10:30 | Partition Pruning & Elimination | 45 min | How optimizer skips partitions |
+| 10:30-11:15 | Performance at Billion-Row Scale | 45 min | IO vs CPU bottlenecks |
+| 11:15-12:00 | Parallel Query Execution | 45 min | Work_mem, Shared Buffers, memory grants |
+| 12:00-13:00 | **Lunch Break** | 60 min | - |
+| 13:00-13:45 | 30 Quick Performance Tips | 45 min | Practical optimizations |
+| 13:45-14:30 | Lab Exercises 1-3 | 45 min | Hands-on partitioning |
+| 14:30-15:15 | Lab Exercises 4-5 | 45 min | Pressure scenario |
+| 15:15-15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
 
 ---
 
@@ -223,7 +223,7 @@ Finalize Aggregate
 **Partitioning & Structure (21-25)**
 21. Partition large tables (> 1GB) by date or range.
 22. Partition pruning: Filter directly on partition key.
-23. Keep partition sizes between 100MB–1GB.
+23. Keep partition sizes between 100MB-1GB.
 24. Archive old partitions separately.
 25. Use UNLOGGED tables for temporary data (faster, risky).
 
@@ -255,7 +255,7 @@ Finalize Aggregate
 
 ## 🧪 Lab Exercises (Uber Database)
 
-### Lab 1: Range Partition — Monthly Trips Table
+### Lab 1: Range Partition - Monthly Trips Table
 **Create partitioned trips table by month. Verify partition pruning.**
 
 ```sql
@@ -302,7 +302,7 @@ WHERE started_at >= '2026-03-01' AND started_at < '2026-04-01';
 -- Expected: Only trips_2026_03 scanned, others pruned
 ```
 
-### Lab 2: List Partition — Trips by City
+### Lab 2: List Partition - Trips by City
 **Partition trips by city (NYC, SF, LA, Other). Check pruning.**
 
 ```sql
@@ -340,7 +340,7 @@ SELECT COUNT(*) FROM trips_by_city WHERE city = 'NYC';
 -- Expected: Only trips_nyc scanned
 ```
 
-### Lab 3: Hash Partition — Distribute Load
+### Lab 3: Hash Partition - Distribute Load
 **Create hash partition by driver_id (4 partitions). Check even distribution.**
 
 ```sql
@@ -372,7 +372,7 @@ ORDER BY partition;
 -- Expected: ~equal distribution (±5%)
 ```
 
-### Lab 4: Performance Comparison — Partitioned vs Unpartitioned
+### Lab 4: Performance Comparison - Partitioned vs Unpartitioned
 **Run same query on partitioned and unpartitioned table. Compare execution time.**
 
 ```sql
@@ -399,7 +399,7 @@ WHERE started_at >= '2026-03-01' AND started_at < '2026-04-01';
 -- Reason: Partition pruning skips 11 months of data
 ```
 
-### Lab 5: Pressure Scenario — Query Fine on Small Dataset, Collapses at Scale
+### Lab 5: Pressure Scenario - Query Fine on Small Dataset, Collapses at Scale
 **PRESSURE: Query runs in 100ms on 1M rows. At 100M rows, timeout (5min). Fix.**
 
 **Scenario:**
@@ -525,7 +525,7 @@ GROUP BY d.id, d.name;
 ### Solution Layered Approach
 
 ```sql
--- LAYER 1: Immediate fix — increase work_mem
+-- LAYER 1: Immediate fix - increase work_mem
 SET work_mem = '2GB';
 -- Rerun query (should no longer spill)
 
@@ -564,10 +564,10 @@ GROUP BY d.id, d.name;
 - [ ] Understand work_mem and memory spill to disk
 - [ ] Know 30 quick performance tips (can recall 15+)
 - [ ] Can read parallel execution plans
-- [ ] Attempted Lab 1–5 without solutions
+- [ ] Attempted Lab 1-5 without solutions
 - [ ] Understand billion-row scale challenges
 - [ ] Can diagnose "works at 1M rows, fails at 100M" scenario
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 

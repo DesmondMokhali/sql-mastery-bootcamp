@@ -1,6 +1,6 @@
 # 🔄 Day 6: Subqueries, CTEs & Optimization
 **Tuesday, 10 March 2026**  
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Time | Activity | Duration | Focus |
 |------|----------|----------|-------|
-| 09:00–09:45 | Subquery Types Deep Dive | 45 min | Scalar, inline, correlated |
-| 09:45–10:30 | Common Table Expressions (CTEs) | 45 min | WITH clause, readability |
-| 10:30–11:15 | Derived Tables & Inline Views | 45 min | FROM clause subqueries |
-| 11:15–12:00 | Performance Comparison | 45 min | Subquery vs CTE vs JOIN |
-| 12:00–13:00 | **Lunch Break** | 60 min | – |
-| 13:00–13:45 | CTE Recursive Patterns | 45 min | Advanced CTEs |
-| 13:45–14:30 | Lab Exercises 1–3 | 45 min | Hands-on coding |
-| 14:30–15:15 | Lab Exercises 4–5 | 45 min | Pressure scenario |
-| 15:15–15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
+| 09:00-09:45 | Subquery Types Deep Dive | 45 min | Scalar, inline, correlated |
+| 09:45-10:30 | Common Table Expressions (CTEs) | 45 min | WITH clause, readability |
+| 10:30-11:15 | Derived Tables & Inline Views | 45 min | FROM clause subqueries |
+| 11:15-12:00 | Performance Comparison | 45 min | Subquery vs CTE vs JOIN |
+| 12:00-13:00 | **Lunch Break** | 60 min | - |
+| 13:00-13:45 | CTE Recursive Patterns | 45 min | Advanced CTEs |
+| 13:45-14:30 | Lab Exercises 1-3 | 45 min | Hands-on coding |
+| 14:30-15:15 | Lab Exercises 4-5 | 45 min | Pressure scenario |
+| 15:15-15:35 | Wrap-up & Recap | 20 min | Checklist & homework |
 
 ---
 
@@ -24,7 +24,7 @@
 
 ### 1. Subquery Types
 
-**Scalar Subquery** — Returns one row, one column. Can appear in SELECT, WHERE, or HAVING.
+**Scalar Subquery** - Returns one row, one column. Can appear in SELECT, WHERE, or HAVING.
 
 ```sql
 -- Find drivers who earn more than average
@@ -41,7 +41,7 @@ WHERE driver_id IN (
 );
 ```
 
-**Inline Subquery (FROM)** — Subquery in FROM clause becomes a temporary dataset.
+**Inline Subquery (FROM)** - Subquery in FROM clause becomes a temporary dataset.
 
 ```sql
 -- Subqueries in FROM are called derived tables
@@ -62,7 +62,7 @@ FROM (
 WHERE driver_stats.trip_count > 10;
 ```
 
-**Correlated Subquery** — References outer query tables. Executes once per outer row.
+**Correlated Subquery** - References outer query tables. Executes once per outer row.
 
 ```sql
 -- Find trips more expensive than that driver's average
@@ -82,7 +82,7 @@ WHERE t.fare > (
 
 ### 2. Common Table Expressions (CTEs)
 
-**Named temporary result sets** — readable, reusable, modular.
+**Named temporary result sets** - readable, reusable, modular.
 
 ```sql
 WITH driver_stats AS (
@@ -112,7 +112,7 @@ ORDER BY ds.avg_fare DESC;
 
 ### 3. Derived Tables vs CTEs
 
-**Derived Table** — Anonymous inline subquery in FROM.
+**Derived Table** - Anonymous inline subquery in FROM.
 
 ```sql
 SELECT * FROM (
@@ -123,7 +123,7 @@ SELECT * FROM (
 WHERE t.avg_fare > 40;
 ```
 
-**CTE** — Named, readable, reusable within same query.
+**CTE** - Named, readable, reusable within same query.
 
 ```sql
 WITH avg_fares AS (
@@ -136,7 +136,7 @@ SELECT * FROM avg_fares WHERE avg_fare > 40;
 
 ### 4. Recursive CTEs
 
-**Self-referencing CTEs** — Walk hierarchies, generate sequences.
+**Self-referencing CTEs** - Walk hierarchies, generate sequences.
 
 ```sql
 -- Generate sequence of ride IDs (example only)
@@ -151,14 +151,14 @@ SELECT * FROM ride_sequence;
 ### 5. Optimization: Subquery vs CTE vs JOIN
 
 ```sql
--- SUBQUERY (correlated) — slow, row-by-row execution
+-- SUBQUERY (correlated) - slow, row-by-row execution
 SELECT t.id, t.fare
 FROM trips t
 WHERE t.fare > (
   SELECT AVG(fare) FROM trips t2 WHERE t2.driver_id = t.driver_id
 );
 
--- CTE — materialized, optimized
+-- CTE - materialized, optimized
 WITH driver_avgs AS (
   SELECT driver_id, AVG(fare) as avg_fare FROM trips GROUP BY driver_id
 )
@@ -167,7 +167,7 @@ FROM trips t
 JOIN driver_avgs da ON t.driver_id = da.driver_id
 WHERE t.fare > da.avg_fare;
 
--- JOIN (best) — single execution plan
+-- JOIN (best) - single execution plan
 SELECT t.id, t.fare
 FROM trips t
 JOIN (SELECT driver_id, AVG(fare) as avg_fare FROM trips GROUP BY driver_id) da 
@@ -196,7 +196,7 @@ WHERE t.fare > da.avg_fare;
 
 ## 🧪 Lab Exercises (Uber Database)
 
-### Lab 1: Scalar Subquery — Driver Above Average
+### Lab 1: Scalar Subquery - Driver Above Average
 **Find all trips where the fare exceeds that driver's average fare.**
 
 ```sql
@@ -217,7 +217,7 @@ ORDER BY t.fare DESC
 LIMIT 20;
 ```
 
-### Lab 2: CTE — Top Drivers by Rating
+### Lab 2: CTE - Top Drivers by Rating
 **Using CTE, find top 10 drivers with highest average rating AND at least 20 trips.**
 
 ```sql
@@ -248,7 +248,7 @@ ORDER BY avg_rating DESC
 LIMIT 10;
 ```
 
-### Lab 3: Derived Table — Revenue by City
+### Lab 3: Derived Table - Revenue by City
 **Find total revenue per city, but only show cities where avg fare > $30.**
 
 ```sql
@@ -278,7 +278,7 @@ WHERE city_stats.avg_fare > 30
 ORDER BY city_stats.total_revenue DESC;
 ```
 
-### Lab 4: Multiple CTEs — Payment Analysis
+### Lab 4: Multiple CTEs - Payment Analysis
 **Create CTEs for: (1) driver revenue, (2) payment methods, (3) failed payments. Find drivers with >$1000 revenue but >10% failed payments.**
 
 ```sql
@@ -316,7 +316,7 @@ WHERE dr.total_fare > 1000 AND ps.fail_rate > 10
 ORDER BY ps.fail_rate DESC;
 ```
 
-### Lab 5: Pressure Scenario — Recursive Pattern (BONUS)
+### Lab 5: Pressure Scenario - Recursive Pattern (BONUS)
 **PRESSURE: Your CTE-based query runs 2x slower than the original subquery. Debug why and optimize.**
 
 **Scenario:**
@@ -442,13 +442,13 @@ GROUP BY d.id, d.name;
 ### Diagnosis
 
 1. `all_trips` CTE materializes entire trips table into temp storage.
-2. Only then does `recent_trips` filter — but damage is done.
+2. Only then does `recent_trips` filter - but damage is done.
 3. CTE materialization cost: 2× larger working set.
 
 ### Solution
 
 ```sql
--- OPTIMIZED CTE (fast, 200ms) — Filter EARLY
+-- OPTIMIZED CTE (fast, 200ms) - Filter EARLY
 WITH recent_trips AS (
   SELECT * FROM trips
   WHERE completed_at > NOW() - INTERVAL '30 days'
@@ -471,10 +471,10 @@ GROUP BY d.id, d.name;
 - [ ] Can spot correlated subquery N+1 execution pattern
 - [ ] Understand materialization trade-offs
 - [ ] Can optimize CTE by filtering early
-- [ ] Attempted Lab 1–5 without looking at solutions
+- [ ] Attempted Lab 1-5 without looking at solutions
 - [ ] Explained to someone: "Why CTE might be slower"
 - [ ] Read EXPLAIN output for CTE query
-> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** — Please like, subscribe and support the original creator!
+> 🎬 **Video:** [SQL Full Course for Beginners (30 Hours) - From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus) by **[Data with Baraa](https://www.youtube.com/@DataWithBaraa)** - Please like, subscribe and support the original creator!
 
 ---
 

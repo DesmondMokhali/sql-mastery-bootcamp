@@ -57,7 +57,7 @@ YOUR TEACHING APPROACH:
 6. At the end of each session, score them out of 10 on mastery of that day's topic.
 
 PRESSURE SCENARIOS:
-Each day includes a "pressure scenario" — a real-world problem:
+Each day includes a "pressure scenario" - a real-world problem:
 - Day 1: Primary key lookup mysteriously slow despite index
 - Day 2: Table disk space keeps growing after DELETEs
 - Day 3: Join that runs in 10ms suddenly takes 1 second after data grows
@@ -97,7 +97,7 @@ At the end of each day's session, score the student out of 10:
 - 9-10: Excellent; deep understanding; can teach others
 
 FORMAT FOR SCORING:
-"**Day [X] Mastery Score: [N]/10** — [Reason for score]. [Actionable feedback for next session]."
+"**Day [X] Mastery Score: [N]/10** - [Reason for score]. [Actionable feedback for next session]."
 
 START:
 Acknowledge that you are ready to be their SQL coach. Ask what day they're on and if they're ready to begin their session.
@@ -260,7 +260,7 @@ I've completed the exercises for today. Now let's tackle the pressure scenario. 
 ### Transition 3: Struggling on Exercises → Getting Unstuck
 
 ```
-I'm stuck on exercise [X]. I've tried [describe your attempt]. The error I'm getting is [error]. What am I missing? Don't give me the answer—ask me a question to guide my thinking.
+I'm stuck on exercise [X]. I've tried [describe your attempt]. The error I'm getting is [error]. What am I missing? Don't give me the answer-ask me a question to guide my thinking.
 ```
 
 ### Transition 4: End of Day Review → Tomorrow's Prep
@@ -296,7 +296,7 @@ I don't understand why [topic] matters in the real world. When would I actually 
 ### Situation 3: Over-Confident (Skipping Rigor)
 
 ```
-I think I understand [topic]. Let me propose a solution to this problem [your solution]. Push back if I'm missing something. Don't be nice—be honest.
+I think I understand [topic]. Let me propose a solution to this problem [your solution]. Push back if I'm missing something. Don't be nice-be honest.
 ```
 
 ### Situation 4: Performance Bug (Production-Like)
@@ -387,18 +387,18 @@ The prompts above are designed for the SQL Mastery Bootcamp structure, but you c
 - **Add specific topics** if your course covers different material
 - **Modify video timestamps** if you're using different videos
 - **Add pressure scenarios** relevant to YOUR work environment (change to your actual company's problems)
-- **Adjust the tone** — if you prefer a gentler coach, say so in the master prompt
+- **Adjust the tone** - if you prefer a gentler coach, say so in the master prompt
 
 ---
 
 ## 🎯 BEST PRACTICES FOR AI COACHING
 
-1. **Be honest about your attempt** — Describe what you tried, what happened, what confused you
-2. **Don't ask for the answer** — Ask for guidance instead ("What does this error mean?")
-3. **Push back on the coach** — If the feedback seems wrong, say so
-4. **Review the feedback** — Don't just accept it; understand it
-5. **Come back tomorrow fresh** — AI coaching works best with daily consistency
-6. **Combine with real practice** — The AI is your guide, but you write the SQL
+1. **Be honest about your attempt** - Describe what you tried, what happened, what confused you
+2. **Don't ask for the answer** - Ask for guidance instead ("What does this error mean?")
+3. **Push back on the coach** - If the feedback seems wrong, say so
+4. **Review the feedback** - Don't just accept it; understand it
+5. **Come back tomorrow fresh** - AI coaching works best with daily consistency
+6. **Combine with real practice** - The AI is your guide, but you write the SQL
 
 ---
 
